@@ -1,49 +1,89 @@
 @import "_variables.css";
-@import "grid.css";
 
 body {
-  background: $color-gray;
-  font-family: 'Open Sans', sans-serif;
+  background: $color-white;
+  font-family: 'Roboto Slab', serif;
   color: $color-white;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 300;
 }
 
-.content {
-  position: relative;
-  margin: 0 auto;
-
-  @media only screen and (max-width: $breakpoint-phone-max-width) {
-    margin: 0 20px;
-  }
-
- @media only screen and (min-width: $breakpoint-phone-large-min-width) and (max-width: $breakpoint-phone-large-max-width) {
-    max-width: $content-size-phone-large;
-  }
-
-  @media only screen and (min-width: $breakpoint-tablet-min-width) and (max-width: $breakpoint-tablet-max-width) {
-    max-width: $content-size-tablet;
-  }
-
-  @media only screen and (min-width: $breakpoint-laptop-min-width) and (max-width: $breakpoint-laptop-max-width) {
-    max-width: $content-size-laptop;
-  }
-
-  @media only screen and (min-width: $breakpoint-desktop-min-width) {
-    max-width: $content-size-desktop;
-  }
-}
 .textaligncenter {
-  text-align: left;
-}
-.mainlogo {
-  width: 250px;
   text-align: center;
-  display: block;
-  margin-top: 200px;
-  margin-bottom: 2em;
+}
+
+.colwrap {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .col {
   text-align: left;
   display: block;
   margin-bottom: 2em;
+
+  @media only screen and (min-width: $breakpoint-phone-max-width) {
+    float: left;
+    width: 50%;
+  }
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-weight: 200;
+}
+strong {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.125em;
+  @media only screen and (min-width: $breakpoint-laptop-min-width) {
+    font-size: 64px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 1.125em;
+  @media only screen and (min-width: $breakpoint-laptop-min-width) {
+    font-size: 42px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.5em;
+  @media only screen and (min-width: $breakpoint-laptop-min-width) {
+    font-size: 30px;
+  }
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+.mo-colorwrap {
+  padding: 2em 0;
+  @media only screen and (min-width: $breakpoint-laptop-min-width) {
+  padding: 3em 0;
+  }
+}
+.mo-colorwrap--turquoise {
+  background: $color-turquoise;
+}
+.mo-colorwrap--green {
+  background: $color-green;
+}
+.mo-colorwrap--white {
+  color: $color-black;
 }

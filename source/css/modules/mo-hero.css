@@ -1,0 +1,80 @@
+@import "_variables.css";
+
+.mo-hero {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 100%;
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-tablet-min-width) {
+    padding-bottom: 50%;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop-min-width) {
+    height: 640px;
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.mo-hero__logo {
+  width: 250px;
+  text-align: center;
+  display: block;
+  padding-top: 4em;
+
+  @media only screen and (min-width: $breakpoint-laptop-min-width) {
+    padding-top: 10em;
+  }
+}
+
+
+.mo-hero__imagewrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.mo-hero__slide {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mo-hero__content {
+  position: relative;
+  height: 100%;
+  padding: 2em 0;
+}
+
+.mo-hero__image {
+  img {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $breakpoint-phone-max-width) {
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+

@@ -37,6 +37,12 @@ body {
     width: 50%;
   }
 }
+.mo-fa__margin {
+  width: 20px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  text-align: right;
+}
 
 *, *:before, *:after {
     box-sizing: border-box;
@@ -78,16 +84,17 @@ p {
 }
 
 a {
-  color: #fff;
+  color: $color-black;
   text-decoration: none;
   border-bottom: 1px solid #79becd;
 
   &:hover {
-  border-color: #fff;
+  border-color: $color-black;
   }
 }
 
 .mo-colorwrap {
+  position: relative;
   padding: 2em 0;
   @media only screen and (min-width: $breakpoint-laptop-min-width) {
   padding: 3em 0;
@@ -101,4 +108,7 @@ a {
 }
 .mo-colorwrap--white {
   color: $color-black;
+}
+.mo-colorwrap--skyblue {
+  background: $color-skyblue;
 }

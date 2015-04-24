@@ -3,15 +3,15 @@
 .mo-hero {
   width: 100%;
   margin: auto;
-  padding-bottom: 100%;
+  padding-bottom: 50%;
   position: relative;
 
   @media only screen and (min-width: $breakpoint-tablet-min-width) {
-    padding-bottom: 50%;
+    padding-bottom: 25%;
   }
 
   @media only screen and (min-width: $breakpoint-desktop-min-width) {
-    height: 640px;
+    height: 320px;
     display: block;
     overflow: hidden;
     padding-bottom: 0;
@@ -28,10 +28,15 @@
   width: 250px;
   text-align: center;
   display: block;
-  padding-top: 4em;
+  padding-top: 0em;
+
+  @media only screen and (min-width: $breakpoint-tablet-min-width) {
+    padding-top: 1em;
+    width: 300px;
+  }
 
   @media only screen and (min-width: $breakpoint-laptop-min-width) {
-    padding-top: 10em;
+    padding-top: 4em;
   }
 }
 
@@ -44,6 +49,7 @@
   margin: auto;
   bottom: 0;
   overflow: hidden;
+  transform: rotate(180deg);
 }
 
 .mo-hero__slide {
@@ -61,6 +67,7 @@
 
 .mo-hero__title {
   font-size: 20px;
+  margin: 0;
 }
 
 .mo-hero__content {
@@ -71,7 +78,12 @@
 }
 
 .mo-hero__image {
+  transform: rotate(180deg);
+  zoom: 1;
+
   img {
+    transform: rotate(180deg);
+    zoom: 1;
     width: 100%;
   }
 

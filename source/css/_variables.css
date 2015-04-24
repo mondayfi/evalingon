@@ -2,6 +2,7 @@ $color-turquoise: #259db8;
 $color-green: #3aa497;
 $color-white: #fff;
 $color-black: #333;
+$color-skyblue: #439fe0;
 
 $breakpoint-phone-max-width: 479px;
 
@@ -15,7 +16,7 @@ $content-size-tablet: 604px;
 
 $breakpoint-laptop-min-width: 960px;
 $breakpoint-laptop-max-width: 1279px;
-$content-size-laptop: 904px;
+$content-size-laptop: 604px;
 
 $breakpoint-desktop-min-width: 1280px;
-$content-size-desktop: 1204px;
+$content-size-desktop: 604px;

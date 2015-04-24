@@ -26,13 +26,18 @@ gulp.task('scripts', function () {
     .pipe(reload({stream:true}));
 });
 
+gulp.task('fonts', function () {
+  return gulp.src(config.source + 'fonts/*.**')
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(reload({stream:true}));
+});
+
 gulp.task('css', function () {
   var processors = [
     postcssImport()
     ,simplevars
     ,nested
     ,autoprefixer({browsers: ['last 1 version']})
-    ,mqpacker
     ,csswring
   ];
   return gulp

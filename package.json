@@ -2,6 +2,7 @@
   "name": "monday.fi",
   "version": "0.1.1",
   "description": "Website for Monday.fi",
+  "repository": "mondayfi/mondayfi.github.io",
   "keywords": [
     "personal"
   ],

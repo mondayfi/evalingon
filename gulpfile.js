@@ -2,14 +2,10 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var pkg = require('./package.json');
 var watch = require('gulp-watch');
-var postcss = require('gulp-postcss')
-var mqpacker = require('css-mqpacker');
-var autoprefixer = require('autoprefixer-core');
-var csswring = require('csswring');
+var sass = require('gulp-sass');
+var styleguide = require('sc5-styleguide');
 var rename = require('gulp-rename');
-var simplevars =require('postcss-simple-vars');
-var nested = require('postcss-nested');
-var postcssImport = require('postcss-import');
+var minifyCss = require('gulp-minify-css');
 var reload = browserSync.reload;
 
 var config = {
@@ -18,10 +14,14 @@ var config = {
   port: pkg.config.port,
   hostname: process.env.HOSTNAME || pkg.config.hostname,
 };
+var SassOptions = {
+    sourcemap: true,
+    style: "expanded"
+};
 
 
 gulp.task('scripts', function () {
-  return gulp.src(config.source + 'js/*.css')
+  return gulp.src(config.source + 'js/*.js')
     .pipe(gulp.dest('dist/js'))
     .pipe(reload({stream:true}));
 });
@@ -33,23 +33,26 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('css', function () {
-  var processors = [
-    postcssImport()
-    ,simplevars
-    ,nested
-    ,autoprefixer({browsers: ['last 1 version']})
-    ,csswring
-  ];
   return gulp
-    .src(config.source + 'css/**.css')
-    .pipe(postcss(processors))
+    .src(config.source + 'css/import.scss')
+    .pipe(sass(SassOptions))
     .on('error', function (error) {
-      console.log(error)
+      console.log(error);
     })
     .pipe(rename('main.css'))
     .pipe(gulp.dest('dist/css'))
     .pipe(reload({stream:true}));
 });
+
+gulp.task('minify-css', function () {
+  return gulp.src( 'dist/css/*.css')
+    .pipe(minifyCss())
+    .on('error', function (error) {
+      console.log(error);
+    })
+    .pipe(gulp.dest('dist/css'))
+});
+
 
 gulp.task('images', function () {
   return gulp.src(config.source + 'images/**')
@@ -62,10 +65,15 @@ gulp.task('html', function () {
     .pipe(reload({stream:true}));
 });
 
+gulp.task('deploy-to-github', function () {
+  return gulp.src(config.source + '*.html')
+  .pipe(gulp.dest(''));
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
   gulp.watch(config.source + 'js/**', ['scripts']);
-  gulp.watch(config.source + 'css/**/*.css', ['css']);
+  gulp.watch(config.source + 'css/**/*.scss', ['css']);
   gulp.watch(config.source + '*.html', ['html', 'css', 'scripts']);
   gulp.watch(config.source + 'images/**', ['images']);
 
@@ -76,3 +84,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['watch']);
+gulp.task('deploy', ['deploy-to-github']);

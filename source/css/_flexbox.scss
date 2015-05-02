@@ -1,0 +1,32 @@
+.no-flexbox {
+  .mo-flexbox {
+    display: block;
+
+    .mo-flexbox__item {
+      width: 50%;
+    }
+  }
+}
+
+.mo-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  position: relative;
+
+  .mo-flexbox__item {
+    position: relative;
+    flex-basis: 100%;
+
+    @include breakpoint(tablet-and-up) {
+      $item-cap: $global-column-cap / 2;
+      flex-basis: calc(50% - #{$item-cap});
+
+      &:nth-of-type(1):nth-last-of-type(1) {
+        flex-grow: 1;
+      }
+    }
+  }
+}

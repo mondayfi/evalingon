@@ -1,0 +1,34 @@
+.mo-colorwrap {
+  position: relative;
+  padding: 2em 0;
+
+  @include breakpoint(laptop-and-up) {
+    padding: 3em 0;
+  }
+  &--largepadding {
+    padding: 5em 0;
+    @include breakpoint(laptop-and-up) {
+      padding: 8em 0;
+    }
+  }
+  &--athensgrey {
+    background: $color-athensgray;
+  }
+  &--turquoise {
+    background: $color-turquoise;
+  }
+  &--purple {
+    background: $color-purple;
+    color: $color-white;
+  }
+  &--green {
+    background: $color-green;
+  }
+  &--white {
+    color: $color-black;
+  }
+  &--skyblue {
+    background: $color-skyblue;
+    color: $color-white;
+  }
+}

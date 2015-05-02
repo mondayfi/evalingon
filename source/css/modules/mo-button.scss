@@ -1,0 +1,15 @@
+.mo-button {
+  padding: 8px 16px;
+  @include font-title;
+  display: inline-block;
+  border-radius: 3px;
+  text-decoration: none;
+  @include transition-all;
+  &--purple {
+    background: $color-purple;
+    color: $color-white;
+    &:hover {
+      background: $color-darkendpurple;
+    }
+  }
+}

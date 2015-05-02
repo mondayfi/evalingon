@@ -1,0 +1,26 @@
+@import "_variables.css";
+
+.mo-grid {
+  position: relative;
+  margin: 0 auto;
+
+  @include breakpoint(phone) {
+    margin: 0 20px;
+  }
+
+  @include breakpoint(phone-large) {
+    max-width: $content-size-phone-large;
+  }
+
+  @include breakpoint(tablet) {
+    max-width: $content-size-tablet;
+  }
+
+  @include breakpoint(laptop) {
+    max-width: $content-size-laptop;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: $content-size-desktop;
+  }
+}

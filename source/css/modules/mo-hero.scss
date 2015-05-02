@@ -1,0 +1,57 @@
+.mo-hero {
+  @extend %clearfix;
+  width: 100%;
+  margin: auto;
+  height: 300px;
+  position: relative;
+
+  @include breakpoint(tablet-and-up) {
+    height: 500px;
+  }
+
+  &__logo {
+    width: 140px;
+    text-align: center;
+    display: block;
+    padding-top: 0em;
+
+    @include breakpoint(tablet-and-up) {
+      width: 160px;
+    }
+
+    @include breakpoint(laptop-and-up) {
+    }
+  }
+
+  &__slide {
+    @extend %clearfix;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/splash-phone.jpg");
+    background-size: cover;
+
+    @include breakpoint(tablet-and-up) {
+      background-image: url("../images/splash-desktop.jpg")
+    }
+  }
+
+  &__title {
+    @extend %mo-h2;
+    @extend %mo-h2--fontbody;
+    margin: 0;
+    color: $color-white;
+    padding-top: 2.2em;
+    @include breakpoint(tablet-and-up) {
+      padding-top: 3.9em;
+    }
+  }
+
+  &__content {
+    position: relative;
+    height: 100%;
+    padding: 2em 0;
+  }
+}

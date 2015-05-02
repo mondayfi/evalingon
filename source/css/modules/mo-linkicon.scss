@@ -1,0 +1,20 @@
+.mo_linkicon {
+  line-height: 2em;
+  i {
+    width: 30px;
+    @include transition-all;
+  }
+  &__link {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      @include transition-all;
+
+    &:hover {
+      border-color: $color-darkendpurple;
+    }
+  }
+  &:hover {
+    i {
+      color: $color-darkendpurple;
+    }
+  }
+}

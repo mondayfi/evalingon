@@ -3,6 +3,11 @@ $color-green: #3aa497;
 $color-white: #fff;
 $color-black: #333;
 $color-skyblue: #439fe0;
+$color-athensgray: #e9eaed;
+$color-purple: #662D91;
+$color-purple-rgba: rgba(132, 32, 136, 0.3);
+$color-darkendpurple: #675691;
+$color-darkred: #BC3159;
 
 $breakpoint-phone-max-width: 479px;
 
@@ -20,3 +25,7 @@ $content-size-laptop: 604px;
 
 $breakpoint-desktop-min-width: 1280px;
 $content-size-desktop: 604px;
+
+$global-column-cap: 20px;
+$global-spacing-mobile: 1.6rem;
+$global-spacing-desktop: 1.6rem;

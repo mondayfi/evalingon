@@ -1,0 +1,45 @@
+@mixin breakpoint($point) {
+    @if $point == phone {
+        @media only screen and (max-width: $breakpoint-phone-max-width) { @content; }
+    }
+    @if $point == phone-large {
+        @media only screen and (min-width: $breakpoint-phone-large-min-width) and (max-width: $breakpoint-phone-large-max-width) { @content; }
+    }
+    @if $point == phone-large-and-up {
+        @media only screen and (min-width: $breakpoint-phone-large-min-width) { @content; }
+    }
+    @if $point == tablet {
+        @media only screen and (min-width: $breakpoint-tablet-min-width) and (max-width: $breakpoint-tablet-max-width) { @content; }
+    }
+    @if $point == tablet-and-up {
+        @media only screen and (min-width: $breakpoint-tablet-min-width) { @content; }
+    }
+    @if $point == laptop {
+        @media only screen and (min-width: $breakpoint-laptop-min-width) and (max-width: $breakpoint-laptop-max-width) { @content; }
+    }
+    @if $point == laptop-and-up {
+        @media only screen and (min-width: $breakpoint-laptop-min-width) { @content; }
+    }
+    @if $point == desktop {
+        @media only screen and (min-width: $breakpoint-desktop-min-width) { @content; }
+    }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin font-title {
+  font-family: "nimbus-sans", sans-serif;
+}
+
+@mixin font-body {
+  font-family: "freight-text-pro",sans-serif;
+}
+@mixin transition-all {
+  transition: all .15s ease-in;
+}

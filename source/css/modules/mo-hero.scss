@@ -14,6 +14,7 @@
     text-align: center;
     display: block;
     padding-top: 0em;
+    float: left;
 
     @include breakpoint(tablet-and-up) {
       width: 160px;
@@ -32,6 +33,7 @@
     right: 0;
     background-image: url("../images/splash-phone.jpg");
     background-size: cover;
+    background-position: center;
 
     @include breakpoint(tablet-and-up) {
       background-image: url("../images/splash-desktop.jpg")
@@ -43,15 +45,14 @@
     @extend %mo-h2--fontbody;
     margin: 0;
     color: $color-white;
-    padding-top: 2.2em;
+    padding-top: 2.1em;
     @include breakpoint(tablet-and-up) {
-      padding-top: 3.9em;
+      padding-top: 3.6em;
     }
   }
 
   &__content {
     position: relative;
-    height: 100%;
     padding: 2em 0;
   }
 }

@@ -56,3 +56,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.mo-smalltext {
+  font-size: 14px;
+  @include breakpoint(tablet-and-up) {
+    font-size: 16px;
+  }
+}

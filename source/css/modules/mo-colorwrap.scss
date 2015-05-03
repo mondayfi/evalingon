@@ -5,28 +5,56 @@
   @include breakpoint(laptop-and-up) {
     padding: 3em 0;
   }
+
   &--largepadding {
     padding: 5em 0;
+
     @include breakpoint(laptop-and-up) {
       padding: 6em 0;
     }
   }
+
+  &--smallpadding {
+    padding: 1em 0;
+
+    @include breakpoint(laptop-and-up) {
+      padding: 1.5em 0;
+    }
+  }
+
+  &--nopadding {
+    padding: 0;
+
+    @include breakpoint(laptop-and-up) {
+      padding: 0;
+    }
+  }
+
   &--athensgrey {
     background: $color-athensgray;
   }
+
   &--turquoise {
     background: $color-turquoise;
   }
+
   &--purple {
     background: $color-purple;
     color: $color-white;
   }
+
   &--green {
     background: $color-green;
   }
+
   &--white {
     color: $color-black;
+
+    &--border {
+      border-bottom: 1px solid $color-athensgray;
+    }
   }
+
   &--skyblue {
     background: $color-skyblue;
     color: $color-white;

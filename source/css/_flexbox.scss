@@ -9,23 +9,17 @@
 }
 
 .mo-flexbox {
-  display: flex;
-  flex-wrap: wrap;
+  @extend %clearfix;
   align-items: stretch;
   justify-content: space-between;
   position: relative;
 
   .mo-flexbox__item {
     position: relative;
-    flex-basis: 100%;
-
+    display: block;
     @include breakpoint(tablet-and-up) {
-      $item-cap: $global-column-cap / 2;
-      flex-basis: calc(50% - #{$item-cap});
-
-      &:nth-of-type(1):nth-last-of-type(1) {
-        flex-grow: 1;
-      }
+      width: 50%;
+      float: left;
     }
     &--border {
       margin-bottom: 1em;

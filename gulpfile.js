@@ -6,6 +6,8 @@ var sass = require('gulp-sass');
 var styleguide = require('sc5-styleguide');
 var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
+var svgmin = require('gulp-svgmin');
+var imagemin = require('gulp-imagemin');
 var reload = browserSync.reload;
 
 var config = {
@@ -53,10 +55,17 @@ gulp.task('minify-css', function () {
     .pipe(gulp.dest('dist/css'))
 });
 
-
-gulp.task('images', function () {
-  return gulp.src(config.source + 'images/**')
+gulp.task('images-jpg', function () {
+  return gulp.src(config.source + 'images/**.jpg')
+      .pipe(imagemin({
+            progressive: true
+        }))
     .pipe(gulp.dest('dist/images'));
+});
+gulp.task('svgscour', function () {
+  return gulp.src(config.source + 'images/**.svg')
+      .pipe(svgmin())
+      .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('html', function () {
@@ -75,7 +84,7 @@ gulp.task('watch', function() {
   gulp.watch(config.source + 'js/**', ['scripts']);
   gulp.watch(config.source + 'css/**/*.scss', ['css']);
   gulp.watch(config.source + '*.html', ['html', 'css', 'scripts']);
-  gulp.watch(config.source + 'images/**', ['images']);
+  gulp.watch(config.source + 'images/**', ['images-jpg', 'svgscour']);
 
   browserSync.init({
     server: "./dist",
@@ -84,4 +93,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['watch']);
-gulp.task('deploy', ['deploy-to-github']);
+gulp.task('deploy', ['minify-css', 'deploy-to-github']);

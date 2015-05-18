@@ -5,6 +5,20 @@
   border-radius: 3px;
   text-decoration: none;
   @include transition-all;
+  position: relative;
+  overflow: hidden;
+  webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  &:hover {
+      -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+  @include breakpoint(tablet-and-up) {
+    font-size: 20px;
+  }
   &--purple {
     background: $color-purple;
     color: $color-white;
@@ -15,9 +29,13 @@
   &--white {
     background: $color-white;
     color: $color-black;
+
     &:hover {
       background: $color-darkendpurple;
       color: $color-white;
+      .mo-button__icon {
+        color: $color-white;
+      }
     }
   }
   &--margintop {
@@ -29,5 +47,48 @@
   &__icon {
     margin-right: 10px;
     color: $color-purple;
+    @include transition-all;
+  }
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(0,0,0,.25);
+  border-radius: 100%;
+  transform: scale(0.2);
+  opacity:0;
+  pointer-events: none;
+  -webkit-animation: ripple .5s ease-out;
+  -moz-animation: ripple .5s ease-out;
+  animation: ripple .5s ease-out;
+}
+
+@-webkit-keyframes ripple {
+  from {
+    opacity:1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes ripple {
+  from {
+    opacity:1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity:1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
   }
 }

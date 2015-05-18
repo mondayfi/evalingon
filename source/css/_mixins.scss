@@ -38,8 +38,9 @@
 }
 
 @mixin font-body {
-  font-family: "freight-text-pro",sans-serif;
+  font-family: "freight-text-pro", sans-serif;
 }
+
 @mixin transition-all {
   transition: all .15s ease-in;
 }

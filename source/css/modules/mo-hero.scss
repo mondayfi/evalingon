@@ -45,7 +45,7 @@
     @extend %mo-h2--fontbody;
     margin: 0;
     color: $color-white;
-    padding-top: 2.1em;
+    padding-top: 3.1em;
     @include breakpoint(tablet-and-up) {
       padding-top: 3.6em;
     }

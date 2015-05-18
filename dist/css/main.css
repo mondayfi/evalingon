@@ -2132,9 +2132,9 @@ table {
   clear: both; }
 
 body {
-  font-family: "freight-text-pro",sans-serif;
+  font-family: "freight-text-pro", sans-serif;
   color: #333;
-  font-size: 1.3125em;
+  font-size: 16px;
   line-height: 1.5em;
   font-weight: 300; }
 
@@ -2150,14 +2150,14 @@ h1 {
 h2, .mo-hero__title {
   font-family: "nimbus-sans", sans-serif;
   letter-spacing: -1px;
-  font-size: 32px;
+  font-size: 26px;
   line-height: 1.125em; }
   @media only screen and (min-width: 640px) {
     h2, .mo-hero__title {
       font-size: 42px; } }
 
 .mo-hero__title {
-  font-family: "freight-text-pro",sans-serif; }
+  font-family: "freight-text-pro", sans-serif; }
 
 h3 {
   font-size: 24px;
@@ -2169,6 +2169,10 @@ h3 {
 
 p {
   margin-bottom: 16px; }
+  @media only screen and (min-width: 640px) {
+    p {
+      font-size: 20px;
+      line-height: 1.5em; } }
 
 strong {
   font-weight: 600; }
@@ -2176,6 +2180,9 @@ strong {
 a {
   text-decoration: none;
   color: inherit; }
+  @media only screen and (min-width: 640px) {
+    a {
+      font-size: 20px; } }
 
 .mo-smalltext {
   font-size: 14px; }
@@ -2283,7 +2290,7 @@ body {
   .mo-hero__title {
     margin: 0;
     color: #fff;
-    padding-top: 2.1em; }
+    padding-top: 3.1em; }
     @media only screen and (min-width: 640px) {
       .mo-hero__title {
         padding-top: 3.6em; } }
@@ -2361,7 +2368,19 @@ body {
   display: inline-block;
   border-radius: 3px;
   text-decoration: none;
-  transition: all .15s ease-in; }
+  transition: all .15s ease-in;
+  position: relative;
+  overflow: hidden;
+  webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  .mo-button:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+  @media only screen and (min-width: 640px) {
+    .mo-button {
+      font-size: 20px; } }
   .mo-button--purple {
     background: #662D91;
     color: #fff; }
@@ -2373,13 +2392,51 @@ body {
     .mo-button--white:hover {
       background: #675691;
       color: #fff; }
+      .mo-button--white:hover .mo-button__icon {
+        color: #fff; }
   .mo-button--margintop {
     margin-top: 1em; }
   .mo-button--margintopminor {
     margin-top: 10px; }
   .mo-button__icon {
     margin-right: 10px;
-    color: #662D91; }
+    color: #662D91;
+    transition: all .15s ease-in; }
+
+.ripple {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  transform: scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-animation: ripple .5s ease-out;
+  -moz-animation: ripple .5s ease-out;
+  animation: ripple .5s ease-out; }
+
+@-webkit-keyframes ripple {
+  from {
+    opacity: 1; }
+
+  to {
+    transform: scale(2);
+    opacity: 0; } }
+
+@-moz-keyframes ripple {
+  from {
+    opacity: 1; }
+
+  to {
+    transform: scale(2);
+    opacity: 0; } }
+
+@keyframes ripple {
+  from {
+    opacity: 1; }
+
+  to {
+    transform: scale(2);
+    opacity: 0; } }
 
 .mo_linkicon {
   line-height: 2em; }

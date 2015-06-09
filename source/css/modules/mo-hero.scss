@@ -4,6 +4,7 @@
   margin: auto;
   height: 300px;
   position: relative;
+  overflow: hidden;
 
   @include breakpoint(tablet-and-up) {
     height: 500px;

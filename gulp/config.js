@@ -20,6 +20,10 @@ module.exports = {
       imagePath: 'images' // Used by the image-url helper
     }
   },
+  favicons: {
+    src: src + '/favicons/**.*',
+    dist: dest
+  },
   vendorstyles: {
     src: './node_modules/normalize.css/normalize.css',
     dest: dest + '/css'

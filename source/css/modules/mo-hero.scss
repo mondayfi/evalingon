@@ -58,6 +58,7 @@
   }
 
   &__clouds {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +66,6 @@
     height: auto;
     min-height: 195px;
     z-index: 1;
-    background: url("../images/clouds.png") 0 100% repeat-x;
     -webkit-animation: horizontalLoop 160s linear infinite;
     animation: horizontalLoop 160s linear infinite;
     opacity: .2;
@@ -75,6 +75,8 @@
     @include breakpoint(tablet-and-up) {
       min-height: 400px;
       height: 100%;
+      display: block;
+      background: url("../images/clouds.png") 0 100% repeat-x;
     }
   }
 }

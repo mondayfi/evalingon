@@ -24,6 +24,13 @@ module.exports = {
     src: src + '/favicons/**.*',
     dist: dest
   },
+  hb: {
+    src: src + '/templates/pages/*.hbs',
+    dist: dest,
+    data: src + '/data/**/*.{js,json}',
+    partials: src + '/templates/partials/*.hbs',
+    helpers: './node_modules/handlebars-layouts/index.js',
+  },
   vendorstyles: {
     src: './node_modules/normalize.css/normalize.css',
     dest: dest + '/css'
@@ -36,8 +43,8 @@ module.exports = {
     src: src + "/images/**/**.*",
     dest: dest + "/images"
   },
-  html: {
-    src: src + "/**.html",
+  utils: {
+    src: src + "/utils/**.*",
     dest: dest
   },
   iconFonts: {

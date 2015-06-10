@@ -39,11 +39,17 @@
   @if $filename == linkedin {
     $char: "\E004";
   }
-  @if $filename == phone {
+  @if $filename == medium {
     $char: "\E005";
   }
-  @if $filename == twitter {
+  @if $filename == phone {
     $char: "\E006";
+  }
+  @if $filename == spotify {
+    $char: "\E007";
+  }
+  @if $filename == twitter {
+    $char: "\E008";
   }
 
   @return $char;
@@ -68,8 +74,14 @@
 .mo-icon--linkedin {
   @include icon(linkedin);
 }
+.mo-icon--medium {
+  @include icon(medium);
+}
 .mo-icon--phone {
   @include icon(phone);
+}
+.mo-icon--spotify {
+  @include icon(spotify);
 }
 .mo-icon--twitter {
   @include icon(twitter);

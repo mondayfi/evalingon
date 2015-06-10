@@ -10,6 +10,13 @@
     height: 500px;
   }
 
+  &--narrow {
+    height: 90px;
+    @include breakpoint(tablet-and-up) {
+      height: 100px;
+    }
+  }
+
   &__logo {
     width: 140px;
     text-align: center;

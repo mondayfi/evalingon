@@ -1,0 +1,11 @@
+ .mo-inline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @extend %clearfix;
+
+  &__item {
+    float: left;
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.mo-stand-alone {
+  text-align: center;
+
+  @include breakpoint(tablet-and-up) {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin: 0 0 15px 0;
+  }
+  &__sub-title {
+    margin: 0 0 15px 0;
+  }
+}

@@ -1,6 +1,7 @@
 .mo-grid {
   position: relative;
   margin: 0 auto;
+  @extend %clearfix;
 
   @include breakpoint(phone) {
     margin: 0 20px;

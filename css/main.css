@@ -1,14 +1,14 @@
 @charset "UTF-8";
 /* Global */
-.mo-flexbox:after, .mo-hero:after, .mo-hero__slide:after, .mo-footer:after, .mo-footer__some__ul:after, .mo-inline-list:after {
+.mo-flexbox:after, .mo-grid:after, .mo-hero:after, .mo-hero__slide:after, .mo-footer:after, .mo-footer__some__ul:after, .mo-inline-list:after {
   content: "";
   display: table;
   clear: both; }
 
 @font-face {
   font-family: "jalo-icons";
-  src: url("../fonts/jalo-icons.eot");
-  src: url("../fonts/jalo-icons.eot?#iefix") format("eot"), url("../fonts/jalo-icons.woff") format("woff"), url("../fonts/jalo-icons.ttf") format("truetype"), url("../fonts/jalo-icons.svg#jalo-icons") format("svg"); }
+  src: url('../fonts/jalo-icons.eot');
+  src: url('../fonts/jalo-icons.eot?#iefix') format('eot'), url('../fonts/jalo-icons.woff') format('woff'), url('../fonts/jalo-icons.ttf') format('truetype'), url('../fonts/jalo-icons.svg#jalo-icons') format('svg'); }
 
 .mo-icon {
   font-size: 16px;
@@ -26,28 +26,28 @@
   vertical-align: middle; }
 
 .mo-icon--envelope:before {
-  content: ""; }
+  content: "\E001"; }
 
 .mo-icon--facebook:before {
-  content: ""; }
+  content: "\E002"; }
 
 .mo-icon--heart:before {
-  content: ""; }
+  content: "\E003"; }
 
 .mo-icon--linkedin:before {
-  content: ""; }
+  content: "\E004"; }
 
 .mo-icon--medium:before {
-  content: ""; }
+  content: "\E005"; }
 
 .mo-icon--phone:before {
-  content: ""; }
+  content: "\E006"; }
 
 .mo-icon--spotify:before {
-  content: ""; }
+  content: "\E007"; }
 
 .mo-icon--twitter:before {
-  content: ""; }
+  content: "\E008"; }
 
 body {
   font-family: "freight-text-pro", sans-serif;
@@ -65,15 +65,13 @@ h1 {
     h1 {
       font-size: 64px; } }
 
-h2,
-.mo-hero__title {
+h2, .mo-hero__title {
   font-family: "nimbus-sans", sans-serif;
   letter-spacing: -1px;
   font-size: 26px;
   line-height: 1.125em; }
   @media only screen and (min-width: 640px) {
-    h2,
-    .mo-hero__title {
+    h2, .mo-hero__title {
       font-size: 42px; } }
 
 .mo-hero__title {
@@ -249,6 +247,7 @@ body {
 @-webkit-keyframes horizontalLoop {
   0 {
     -webkit-transform: translate3d(0, 0, 0); }
+
   100% {
     -webkit-transform: translate3d(-50%, 0, 0); } }
 
@@ -256,6 +255,7 @@ body {
   0 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
+
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); } }
@@ -282,7 +282,7 @@ body {
     height: 100%;
     display: block;
     background-color: rgba(132, 32, 136, 0.15);
-    transition: all 0.15s ease-in; }
+    transition: all .15s ease-in; }
     .mo-authorimage__imagefilter:hover {
       background-color: transparent; }
   @media only screen and (min-width: 640px) {
@@ -295,6 +295,9 @@ body {
     float: left;
     vertical-align: middle;
     margin-right: 10px; }
+  .mo-authorimage--stand-alone {
+    width: 200px;
+    height: 200px; }
 
 .mo-colorwrap {
   position: relative;
@@ -340,7 +343,7 @@ body {
   display: inline-block;
   border-radius: 3px;
   text-decoration: none;
-  transition: all 0.15s ease-in;
+  transition: all .15s ease-in;
   position: relative;
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
@@ -369,16 +372,16 @@ body {
   .mo-button__icon {
     margin-right: 10px;
     color: #662D91;
-    transition: all 0.15s ease-in; }
+    transition: all .15s ease-in; }
 
 .mo_linkicon {
   line-height: 2em; }
   .mo_linkicon i {
     width: 30px;
-    transition: all 0.15s ease-in; }
+    transition: all .15s ease-in; }
   .mo_linkicon__link {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: all 0.15s ease-in; }
+    transition: all .15s ease-in; }
     .mo_linkicon__link:hover {
       border-color: rgba(0, 0, 0, 0.5); }
   .mo_linkicon:hover i {
@@ -407,7 +410,7 @@ body {
     text-align: center;
     display: block;
     padding: 1em 0;
-    transition: all 0.15s ease-in; }
+    transition: all .15s ease-in; }
     .mo-footer__some__item--border {
       border-right: 2px solid #e9eaed; }
     .mo-footer__some__item:hover {
@@ -422,3 +425,15 @@ body {
   .mo-inline-list__item {
     float: left;
     margin-right: 20px; }
+
+.mo-stand-alone {
+  text-align: center; }
+  @media only screen and (min-width: 640px) {
+    .mo-stand-alone {
+      float: right;
+      margin-left: 30px;
+      margin-bottom: 20px; } }
+  .mo-stand-alone__title {
+    margin: 0 0 15px 0; }
+  .mo-stand-alone__sub-title {
+    margin: 0 0 15px 0; }

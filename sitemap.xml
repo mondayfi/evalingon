@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>http://monday.fi</loc>
+    <changefreq>daily</changefreq>
+    <image:image>
+        <image:loc>http://monday.fi/images/fb-monday.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://monday.fi/pyry</loc>
+    <changefreq>daily</changefreq>
+    <image:image>
+        <image:loc>http://monday.fi/images/pyry.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://monday.fi/samuel</loc>
+    <changefreq>daily</changefreq>
+    <image:image>
+        <image:loc>http://monday.fi/images/samuel.jpg</image:loc>
+    </image:image>
+  </url>
+</urlset>

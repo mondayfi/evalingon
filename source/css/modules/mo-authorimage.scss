@@ -6,9 +6,41 @@
   margin: 0 auto 1em;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 100%;
+  display: block;
 
   @include breakpoint(tablet-and-up) {
     margin: 0 0 1em 0;
+  }
+
+  &--left {
+    @include breakpoint(tablet-and-up) {
+      float: left;
+      margin-right: 20px;
+    }
+  }
+
+  &--small {
+    width: 40px;
+    height: 40px;
+    float: left;
+    vertical-align: middle;
+    margin-right: 10px;
+
+    @include breakpoint(tablet-and-up) {
+      width: 60px;
+      height: 60px;
+      margin-right: 30px;
+    }
+  }
+
+
+  &--margin-top {
+      margin-top: 4px;
+  }
+
+  &--stand-alone {
+    width: 200px;
+    height: 200px;
   }
 
   &__image {
@@ -29,22 +61,5 @@
     &:hover {
       background-color: transparent;
     }
-  }
-  &--left {
-    @include breakpoint(tablet-and-up) {
-      float: left;
-      margin-right: 20px;
-    }
-  }
-  &--small {
-    width: 40px;
-    height: 40px;
-    float: left;
-    vertical-align: middle;
-    margin-right: 10px;
-  }
-  &--stand-alone {
-    width: 200px;
-    height: 200px;
   }
 }

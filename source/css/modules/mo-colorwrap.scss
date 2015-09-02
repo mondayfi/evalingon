@@ -30,6 +30,14 @@
     }
   }
 
+  &--no-top-padding {
+    padding-top: 0;
+
+    @include breakpoint(laptop-and-up) {
+        padding-top: 0;
+    }
+  }
+
   &--athensgrey {
     background: $color-athensgray;
   }

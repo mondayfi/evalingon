@@ -1,0 +1,41 @@
+{{#extend "default"}}
+  {{#content "content"}}
+  <div class="mo-hero mo-hero--narrow">
+<canvas id="canvas"></canvas>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="ameba">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="30" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 5 -1" result="blur" />
+        <feGaussianBlur in="blur" stdDeviation="1" result="shadow" />
+        <feColorMatrix in="shadow" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -1" result="mix" />
+      </filter>
+    </defs>
+  </svg>
+    <div class="mo-grid" style="position: absolute; top: 32px; left: 0; right: 0;">
+      <a href="/"><img src="images/monday_logo.svg" class="mo-hero__logo"></a>
+    </div>
+</div>
+<div class="mo-colorwrap mo-colorwrap--white mo-colorwrap--white--border">
+  <div class="mo-grid">
+    <h2 class="mo-stand-alone__title">Tuparit!</h2>
+    <h3 class="mo-stand-alone__sub-title"></h3>
+ <p>Nastaa että pääset mestoille!</p>
+
+<dl>
+    <dt><strong>Pukukoodi:</strong></dt>
+    <dd>Smart casual</dd>
+
+    <dt><strong>Aika:</strong></dt>
+    <dd>19.11 klo 17.00</dd>
+</dl>
+  </div>
+</div>
+
+<div class="mo-colorwrap mo-colorwrap--white mo-colorwrap--smallpadding">
+  <div class="mo-grid">
+  <p class="mo-textaligncenter">Rakkaudella <i class="mo-icon mo-icon--heart mo_heartred"></i> Suomesta.</p>
+  </div>
+</div>
+  {{/content}}
+{{/extend}}

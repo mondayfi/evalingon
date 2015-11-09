@@ -13,14 +13,3 @@ body {
   box-sizing: border-box;
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-filter: url('#ameba');
-  -moz-filter: url('#ameba');
-  -ms-filter: url('#ameba');
-  filter: url('#ameba');
-}

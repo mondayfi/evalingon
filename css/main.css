@@ -7,8 +7,8 @@
 
 @font-face {
   font-family: "jalo-icons";
-  src: url('../fonts/jalo-icons.eot');
-  src: url('../fonts/jalo-icons.eot?#iefix') format('eot'), url('../fonts/jalo-icons.woff') format('woff'), url('../fonts/jalo-icons.ttf') format('truetype'), url('../fonts/jalo-icons.svg#jalo-icons') format('svg'); }
+  src: url("../fonts/jalo-icons.eot");
+  src: url("../fonts/jalo-icons.eot?#iefix") format("eot"), url("../fonts/jalo-icons.woff") format("woff"), url("../fonts/jalo-icons.ttf") format("truetype"), url("../fonts/jalo-icons.svg#jalo-icons") format("svg"); }
 
 .mo-icon {
   font-size: 16px;
@@ -26,28 +26,28 @@
   vertical-align: middle; }
 
 .mo-icon--envelope:before {
-  content: "\E001"; }
+  content: ""; }
 
 .mo-icon--facebook:before {
-  content: "\E002"; }
+  content: ""; }
 
 .mo-icon--heart:before {
-  content: "\E003"; }
+  content: ""; }
 
 .mo-icon--linkedin:before {
-  content: "\E004"; }
+  content: ""; }
 
 .mo-icon--medium:before {
-  content: "\E005"; }
+  content: ""; }
 
 .mo-icon--phone:before {
-  content: "\E006"; }
+  content: ""; }
 
 .mo-icon--spotify:before {
-  content: "\E007"; }
+  content: ""; }
 
 .mo-icon--twitter:before {
-  content: "\E008"; }
+  content: ""; }
 
 body {
   font-family: "freight-text-pro", sans-serif;
@@ -66,24 +66,28 @@ h1 {
     h1 {
       font-size: 64px; } }
 
-h2, .mo-hero__title {
+h2,
+.mo-hero__title {
   font-family: "nimbus-sans", sans-serif;
   letter-spacing: -1px;
   font-size: 26px;
   line-height: 1.125em; }
   @media only screen and (min-width: 640px) {
-    h2, .mo-hero__title {
+    h2,
+    .mo-hero__title {
       font-size: 42px; } }
 
 .mo-hero__title {
   font-family: "freight-text-pro", sans-serif; }
 
-h3 {
+h3,
+.counter {
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 200; }
   @media only screen and (min-width: 640px) {
-    h3 {
+    h3,
+    .counter {
       font-size: 24px; } }
 
 p {
@@ -152,17 +156,6 @@ body {
 
 * {
   box-sizing: border-box; }
-
-canvas {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-filter: url('#ameba');
-  -moz-filter: url('#ameba');
-  -ms-filter: url('#ameba');
-  filter: url('#ameba'); }
 
 .mo-grid {
   position: relative;
@@ -262,7 +255,6 @@ canvas {
 @-webkit-keyframes horizontalLoop {
   0 {
     -webkit-transform: translate3d(0, 0, 0); }
-
   100% {
     -webkit-transform: translate3d(-50%, 0, 0); } }
 
@@ -270,7 +262,6 @@ canvas {
   0 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); } }
@@ -465,3 +456,42 @@ canvas {
     margin: 0 0 15px 0; }
   .mo-stand-alone__sub-title {
     margin: 0 0 15px 0; }
+
+.body-sxsw {
+  background: #662D91; }
+
+.sxsw__image {
+  width: 100%;
+  margin-bottom: 30px; }
+
+.counter {
+  font-family: "nimbus-sans", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  text-align: left; }
+  .counter > div {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    background: #675691;
+    display: inline-block;
+    width: 100%;
+    margin-right: 0; }
+    @media only screen and (min-width: 480px) and (max-width: 639px) {
+      .counter > div {
+        margin-right: 2%;
+        width: 48%; } }
+    @media only screen and (min-width: 640px) {
+      .counter > div {
+        margin-right: 2%;
+        width: 48%; } }
+    .counter > div > span {
+      padding: 15px;
+      border-radius: 3px;
+      background: #fff;
+      color: black;
+      display: inline-block; }
+    .counter > div > div {
+      display: inline-block;
+      padding: 10px; }

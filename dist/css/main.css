@@ -457,6 +457,19 @@ body {
   .mo-stand-alone__sub-title {
     margin: 0 0 15px 0; }
 
+.mo-video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden; }
+  .mo-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 .body-sxsw {
   background: #662D91; }
 

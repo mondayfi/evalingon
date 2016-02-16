@@ -148,5 +148,5 @@ function initializeClock(id, endtime){
   var timeinterval = setInterval(updateClock,1000);
 }
 
-var deadline = 'Marsch 16 2016 07:00:50 UTC+0200';
+var deadline = 'March 10 2016 07:00:50 UTC+0200';
 initializeClock('counter', deadline);

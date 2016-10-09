@@ -7,8 +7,8 @@
 
 @font-face {
   font-family: "jalo-icons";
-  src: url('../fonts/jalo-icons.eot');
-  src: url('../fonts/jalo-icons.eot?#iefix') format('eot'), url('../fonts/jalo-icons.woff') format('woff'), url('../fonts/jalo-icons.ttf') format('truetype'), url('../fonts/jalo-icons.svg#jalo-icons') format('svg'); }
+  src: url("../fonts/jalo-icons.eot");
+  src: url("../fonts/jalo-icons.eot?#iefix") format("eot"), url("../fonts/jalo-icons.woff") format("woff"), url("../fonts/jalo-icons.ttf") format("truetype"), url("../fonts/jalo-icons.svg#jalo-icons") format("svg"); }
 
 .mo-icon {
   font-size: 16px;
@@ -20,33 +20,34 @@
   font-weight: normal;
   text-decoration: none;
   text-transform: none;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
   display: inline-block;
   vertical-align: middle; }
 
 .mo-icon--envelope:before {
-  content: "\E001"; }
+  content: ""; }
 
 .mo-icon--facebook:before {
-  content: "\E002"; }
+  content: ""; }
 
 .mo-icon--heart:before {
-  content: "\E003"; }
+  content: ""; }
 
 .mo-icon--linkedin:before {
-  content: "\E004"; }
+  content: ""; }
 
 .mo-icon--medium:before {
-  content: "\E005"; }
+  content: ""; }
 
 .mo-icon--phone:before {
-  content: "\E006"; }
+  content: ""; }
 
 .mo-icon--spotify:before {
-  content: "\E007"; }
+  content: ""; }
 
 .mo-icon--twitter:before {
-  content: "\E008"; }
+  content: ""; }
 
 body {
   font-family: "freight-text-pro", sans-serif;
@@ -65,24 +66,28 @@ h1 {
     h1 {
       font-size: 64px; } }
 
-h2, .mo-hero__title {
+h2,
+.mo-hero__title {
   font-family: "nimbus-sans", sans-serif;
   letter-spacing: -1px;
   font-size: 26px;
   line-height: 1.125em; }
   @media only screen and (min-width: 640px) {
-    h2, .mo-hero__title {
+    h2,
+    .mo-hero__title {
       font-size: 42px; } }
 
 .mo-hero__title {
   font-family: "freight-text-pro", sans-serif; }
 
-h3, .counter {
+h3,
+.counter {
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 200; }
   @media only screen and (min-width: 640px) {
-    h3, .counter {
+    h3,
+    .counter {
       font-size: 24px; } }
 
 p {
@@ -114,10 +119,12 @@ a {
     width: 50%; }
 
 .mo-flexbox {
-  -ms-flex-align: stretch;
-      align-items: stretch;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative; }
   .mo-flexbox .mo-flexbox__item {
     position: relative;
@@ -233,6 +240,7 @@ body {
     height: auto;
     min-height: 195px;
     z-index: 1;
+    -webkit-animation: horizontalLoop 160s linear infinite;
     animation: horizontalLoop 160s linear infinite;
     opacity: .2;
     background-position: 0 0;
@@ -244,11 +252,18 @@ body {
         display: block;
         background: url("../images/clouds.png") 0 100% repeat-x; } }
 
+@-webkit-keyframes horizontalLoop {
+  0 {
+    -webkit-transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0); } }
+
 @keyframes horizontalLoop {
   0 {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
-
   100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0); } }
 
 .mo-authorimage {
@@ -491,7 +506,7 @@ body {
   clear: left;
   position: relative;
   width: 96%;
-  min-height: 50px; }
+  min-height: 110px; }
 
 #mc_embed_signup .size1of2 {
   clear: none;
@@ -629,9 +644,6 @@ body {
 
 #mc_embed_signup #mc-embedded-subscribe-form input.mce_inline_error {
   border: 2px solid #e85c41; }
-
-#mc_embed_signup .mc_submit {
-  margin-top: 20px; }
 
 .body-sxsw {
   background: #662D91; }

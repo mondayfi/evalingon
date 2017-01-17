@@ -9,7 +9,8 @@
     url('../fonts/jalo-icons.svg#jalo-icons') format('svg');
 }
 
-.mo-icon {
+.mo-icon,
+%mo-icon {
   font-size: 16px;
   font-family: "jalo-icons";
   -webkit-font-smoothing: antialiased;
@@ -27,29 +28,35 @@
 @function icon-char($filename) {
   $char: "";
 
-  @if $filename == envelope {
+  @if $filename == arrow-left {
     $char: "\E001";
   }
-  @if $filename == facebook {
+  @if $filename == arrow-right {
     $char: "\E002";
   }
-  @if $filename == heart {
+  @if $filename == envelope {
     $char: "\E003";
   }
-  @if $filename == linkedin {
+  @if $filename == facebook {
     $char: "\E004";
   }
-  @if $filename == medium {
+  @if $filename == heart {
     $char: "\E005";
   }
-  @if $filename == phone {
+  @if $filename == linkedin {
     $char: "\E006";
   }
-  @if $filename == spotify {
+  @if $filename == medium {
     $char: "\E007";
   }
-  @if $filename == twitter {
+  @if $filename == phone {
     $char: "\E008";
+  }
+  @if $filename == spotify {
+    $char: "\E009";
+  }
+  @if $filename == twitter {
+    $char: "\E00A";
   }
 
   @return $char;
@@ -57,11 +64,17 @@
 
 @mixin icon($filename, $insert: before) {
   &:#{$insert} {
-    @extend %icon;
+    @extend %mo-icon;
     content: icon-char($filename);
   }
 }
 
+.mo-icon--arrow-left {
+  @include icon(arrow-left);
+}
+.mo-icon--arrow-right {
+  @include icon(arrow-right);
+}
 .mo-icon--envelope {
   @include icon(envelope);
 }

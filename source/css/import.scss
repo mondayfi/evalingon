@@ -3,24 +3,12 @@
 @import "_mixins.scss";
 @import "_icons.scss";
 @import "_font-declarations.scss";
-@import "_flexbox.scss";
 @import "global.scss";
 @import "grid.scss";
 @import "helper-classes.scss";
 
 /* Modules */
 @import "modules/mo-hero.scss";
-@import "modules/mo-authorimage.scss";
-@import "modules/mo-colorwrap.scss";
-@import "modules/mo-button.scss";
-@import "modules/mo-linkicon.scss";
-@import "modules/mo-author.scss";
 @import "modules/mo-footer.scss";
-@import "modules/mo-inlinelist.scss";
-@import "modules/mo-standalone.scss";
-@import "modules/mo-videocontainer.scss";
-@import "modules/mailchimp.scss";
-
-// SXSW
-@import "sxsw.scss";
-
+@import "modules/mo-colorwrapper.scss";
+@import "modules/mo-button.scss";

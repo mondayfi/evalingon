@@ -2,7 +2,7 @@
   @extend %clearfix;
   width: 100%;
   margin: auto;
-  height: 250px;
+  height: 260px;
   position: relative;
   overflow: hidden;
 
@@ -10,27 +10,6 @@
     height: 400px;
   }
 
-  &--narrow {
-    height: 90px;
-    @include breakpoint(tablet-and-up) {
-      height: 100px;
-    }
-  }
-
-  &__logo {
-    width: 140px;
-    text-align: center;
-    display: block;
-    padding-top: 0em;
-    float: left;
-
-    @include breakpoint(tablet-and-up) {
-      width: 160px;
-    }
-
-    @include breakpoint(laptop-and-up) {
-    }
-  }
 
   &__slide {
     @extend %clearfix;
@@ -39,62 +18,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("../images/splash-phone.jpg");
+    background-image: url("../images/hero-mobile.jpg");
     background-size: cover;
     background-position: center;
 
     @include breakpoint(tablet-and-up) {
-      background-image: url("../images/splash-desktop.jpg")
+      background-image: url("../images/hero-desktop.jpg")
     }
   }
-
-  &__title {
-    @extend %mo-h2;
-    @extend %mo-h2--fontbody;
-    margin: 0;
-    color: $color-white;
-    padding-top: 3.1em;
-
-    @include breakpoint(tablet-and-up) {
-      padding-top: 3.6em;
-    }
-  }
-
-  &__content {
-    position: relative;
-    padding: 2em 0;
-  }
-
-  &__clouds {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5200px;
-    height: auto;
-    min-height: 195px;
-    z-index: 1;
-    -webkit-animation: horizontalLoop 160s linear infinite;
-    animation: horizontalLoop 160s linear infinite;
-    opacity: .2;
-    background-position: 0 0;
-    background-size: auto;
-
-    @include breakpoint(tablet-and-up) {
-      min-height: 400px;
-      height: 100%;
-      display: block;
-      background: url("../images/clouds.png") 0 100% repeat-x;
-    }
-  }
-}
-
-@-webkit-keyframes horizontalLoop {
-  0   {-webkit-transform: translate3d(0,0,0);}
-  100%  { -webkit-transform: translate3d(-50%,0,0);}
-}
-
-@keyframes horizontalLoop {
-  0   {-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0); }
-  100%  {-webkit-transform: translate3d(-50%,0,0);transform: translate3d(-50%,0,0);}
 }

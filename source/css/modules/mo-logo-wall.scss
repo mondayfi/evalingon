@@ -1,0 +1,16 @@
+.mo-logo-wall {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  
+  &__item {
+    display: inline-block;  
+  } 
+  
+  &__logo {
+    max-width: 100px; 
+    vertical-align: middle; 
+    margin: 0 10px;
+  }
+}

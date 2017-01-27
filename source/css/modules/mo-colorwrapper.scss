@@ -1,13 +1,22 @@
 .mo-colorwrapper {
   position: relative;
-  padding: 2em 0;
+  padding: 6em 0;
 
   @include breakpoint(laptop-and-up) {
-    padding: 3em 0;
+    padding: 8em 0;
   }
 
   &--blue-zodiac {
     background: $color-blue-zodiac;
     color: $color-barley-white;
+  }
+  
+  &--burnt-sienna {
+    background: $color-burnt-sienna;
+    color: $color-barley-white;
+  }
+  
+  &--barley-white {
+    background: $color-barley-white;
   }
 }

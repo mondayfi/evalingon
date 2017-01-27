@@ -1,6 +1,6 @@
 body {
   @include font-body;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5em;
   font-weight: 300;
 }
@@ -12,28 +12,25 @@ h1,
   font-size: 48px;
   line-height: 1.125em;
   font-weight: 200;
+  margin: 0;
 
   @include breakpoint(tablet-and-up) {
     font-size: 64px;
   }
 }
-%mo-h1--fontbody {
-  @include font-body;
-}
 
 h2,
 %mo-h2 {
   @include font-title;
-  letter-spacing: -1px;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.125em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
 
   @include breakpoint(tablet-and-up) {
-    font-size: 42px;
+    font-size: 30px;
   }
-}
-%mo-h2--fontbody {
-  @include font-body;
 }
 
 h3,
@@ -41,6 +38,8 @@ h3,
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 200;
+  margin: 0;
+  
   @include breakpoint(tablet-and-up) {
     font-size: 24px;
   }
@@ -48,8 +47,9 @@ h3,
 
 p {
   margin-bottom: 16px;
+  
   @include breakpoint(tablet-and-up) {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5em;
   }
 }
@@ -61,14 +61,12 @@ strong {
 a {
   text-decoration: none;
   color: inherit;
-  @include breakpoint(tablet-and-up) {
-    font-size: 20px;
-  }
 }
 
 .mo-smalltext {
-  font-size: 14px;
+  font-size: 12px;
+  
   @include breakpoint(tablet-and-up) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

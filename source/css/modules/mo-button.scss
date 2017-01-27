@@ -1,19 +1,25 @@
 .mo-button {
   padding: 8px 16px;
-  @include font-title;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: $button-radius;
+  text-transform: uppercase;
+  @extend .mo-smalltext;
   text-decoration: none;
   @include transition-all;
   position: relative;
   background: $color-burnt-sienna;
   overflow: hidden;
+  color: $color-barley-white;
 
   &:hover {
       background: lighten($color-burnt-sienna, 10%) 
   }
-
-  @include breakpoint(tablet-and-up) {
-    font-size: 20px;
+  
+  &--blue-zodiac {
+    background: $color-blue-zodiac;
+    
+    &:hover {
+      background: lighten($color-blue-zodiac, 10%) 
+    }
   }
 }

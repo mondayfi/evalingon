@@ -2,28 +2,68 @@
   @extend %clearfix;
   width: 100%;
   margin: auto;
-  height: 260px;
   position: relative;
-  overflow: hidden;
+  display: block;
+  height: 320px;
+  background: $color-blue-zodiac;
 
-  @include breakpoint(tablet-and-up) {
-    height: 400px;
+  @include breakpoint(phone-large-and-up) {
+    height: 350px;
   }
 
+  @include breakpoint(tablet-and-up) {
+    height: auto;
+    padding-bottom: 50.7%;
+  }
 
   &__slide {
     @extend %clearfix;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url("../images/hero-mobile.jpg");
-    background-size: cover;
-    background-position: center;
-
+    
     @include breakpoint(tablet-and-up) {
-      background-image: url("../images/hero-desktop.jpg")
+    }
+  }
+  
+  &__image {
+    position: absolute;
+    left: 49.99%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-height: 340px;
+    
+    @include breakpoint(phone-large-and-up) {
+      min-height: 445px;
+    }
+    
+    @include breakpoint(tablet-and-up) {
+      min-height: 400px;
+    }
+    
+    @include breakpoint(laptop-and-up) {
+      min-height: 400px;
+    }
+    
+    &--small {    
+      @include breakpoint(tablet-and-up) {
+        display: none;
+      }
+    }
+    
+    &--large {
+      display: none;
+      
+      @include breakpoint(tablet-and-up) {
+        display: block;
+      }
     }
   }
 }

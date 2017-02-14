@@ -1,3 +1,3 @@
 var gulp = require('gulp');
 
-gulp.task('default', ['scss', 'images', 'markup', 'browserify']);
+gulp.task('default', ['copyicon', 'sass', 'vendorstyles', 'images', 'utils', 'javascript']);

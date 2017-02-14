@@ -10,6 +10,7 @@
   background: $color-burnt-sienna;
   overflow: hidden;
   color: $color-barley-white;
+  font-weight: 700;
 
   &:hover {
       background: lighten($color-burnt-sienna, 10%) 

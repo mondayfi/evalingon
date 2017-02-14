@@ -34,29 +34,41 @@
   @if $filename == arrow-right {
     $char: "\E002";
   }
-  @if $filename == envelope {
+  @if $filename == close {
     $char: "\E003";
   }
-  @if $filename == facebook {
+  @if $filename == envelope {
     $char: "\E004";
   }
-  @if $filename == heart {
+  @if $filename == facebook {
     $char: "\E005";
   }
-  @if $filename == linkedin {
+  @if $filename == hamburger {
     $char: "\E006";
   }
-  @if $filename == medium {
+  @if $filename == heart {
     $char: "\E007";
   }
-  @if $filename == phone {
+  @if $filename == instagram {
     $char: "\E008";
   }
-  @if $filename == spotify {
+  @if $filename == linkedin {
     $char: "\E009";
   }
-  @if $filename == twitter {
+  @if $filename == medium {
     $char: "\E00A";
+  }
+  @if $filename == phone {
+    $char: "\E00B";
+  }
+  @if $filename == spotify {
+    $char: "\E00C";
+  }
+  @if $filename == twitter {
+    $char: "\E00D";
+  }
+  @if $filename == youtube {
+    $char: "\E00E";
   }
 
   @return $char;
@@ -75,14 +87,23 @@
 .mo-icon--arrow-right {
   @include icon(arrow-right);
 }
+.mo-icon--close {
+  @include icon(close);
+}
 .mo-icon--envelope {
   @include icon(envelope);
 }
 .mo-icon--facebook {
   @include icon(facebook);
 }
+.mo-icon--hamburger {
+  @include icon(hamburger);
+}
 .mo-icon--heart {
   @include icon(heart);
+}
+.mo-icon--instagram {
+  @include icon(instagram);
 }
 .mo-icon--linkedin {
   @include icon(linkedin);
@@ -98,4 +119,7 @@
 }
 .mo-icon--twitter {
   @include icon(twitter);
+}
+.mo-icon--youtube {
+  @include icon(youtube);
 }

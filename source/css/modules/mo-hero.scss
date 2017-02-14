@@ -6,16 +6,21 @@
   display: block;
   height: 320px;
   background: $color-blue-zodiac;
+  overflow: hidden;
 
   @include breakpoint(phone-large-and-up) {
-    height: 350px;
+    height: 400px;
   }
 
   @include breakpoint(tablet-and-up) {
-    height: auto;
+    height: 410px;
     padding-bottom: 50.7%;
   }
-
+  
+  @include breakpoint(laptop-and-up) {
+    height: auto;
+  }
+  
   &__slide {
     @extend %clearfix;
     box-sizing: border-box;

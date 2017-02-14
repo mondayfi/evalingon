@@ -10,6 +10,8 @@ services:
       WORDPRESS_DB_PASSWORD: example
     volumes:
       - ./evalingon-theme:/var/www/html/wp-content/themes/evalingon-theme
+      - ./plugins:/var/www/html/wp-content/plugins
+      
 
   mysql:
     image: mariadb

@@ -32,6 +32,11 @@
     @include breakpoint(tablet-and-up) {
       width: 60%;
       float: left;
+      
+      &--full {
+        width: 100%;
+        float: none;
+      }
     }
   }
   
@@ -53,6 +58,10 @@
       left: inherit;
       right: inherit;
       padding: 30px 20px;
+      
+      @include breakpoint(laptop-and-up) {
+        padding-top: 60px;
+      }
     }
   }
 }

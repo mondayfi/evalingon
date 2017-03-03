@@ -1,9 +1,10 @@
 {{#extend "default"}}
   {{#content "content"}}
-{{> hero }}
-
+  {{> hero }}
+  {{> nav }}
+  
 <div class="mo-colorwrapper mo-colorwrapper--blue-zodiac">
-  <div class="mo-grid">
+  <div class="mo-grid mo-grid--content">
     <h2>Who are we?</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nisi ipsum, gravida ut molestie nec, consectetur eget risus. Mauris lorem leo, vehicula nec euismod eget, lacinia at nulla. In auctor eros a porttitor molestie. Quisque vitae venenatis massa. Curabitur non interdum libero.</p>
     <p>In faucibus vehicula turpis, et dapibus velit congue tristique. Ut a diam sem. Vestibulum non mauris rhoncus, lobortis nulla et, ullamcorper magna. </p><p>Pellentesque ornare mauris at arcu rhoncus cursus. Donec porttitor turpis a libero eleifend, quis rhoncus lacus tincidunt. Maecenas ut pharetra diam.</p>
@@ -22,7 +23,7 @@
         <h2>Project Title</h2>
       </span>
       <p>Donec v olutpat iaculis tellus, sed suscipit justo luctus vel.</p>
-      <span class="mo-button">Read more</span>
+      <span class="mo-button mo-button--blue-zodiac">Read more</span>
     </span>
   </a>
   <a href="#" class="mo-fluid-block mo-fluid-block--second">
@@ -66,11 +67,36 @@
 </div>
 
 <div class="mo-colorwrapper mo-colorwrapper--burnt-sienna">
-  <div class="mo-grid">
-    <h2>We also have a podcast</h2>
+  <div class="mo-grid mo-grid--content">
+    <h2 class="title-margin">We also have a podcast</h2>
 <iframe width="100%" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/302509566&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
     <a href="#" class="mo-button mo-button--blue-zodiac">More episodes</a>
+  </div>
+</div>
+
+<div class="mo-colorwrapper mo-colorwrapper--barley-white ">
+  <div class="mo-grid mo-grid--content">    
+    <div class="mo-citation">
+          <div class="mo-citation__item">
+            <div class="mo-citation__bubble">
+              <div class="mo-citation__bubble-inner">
+                <div class="mo-citation__bubble-quote">“</div>
+                <div class="mo-citation__bubble-content">Donec volutpat iaculis tellus, sed suscipit justo luctus vel.</div>
+              </div>
+            </div>
+            <div class="mo-citation__person">
+              <div class="mo-citation__person-image">
+                <img src="/images/johndoe.png" alt="">
+              </div>
+              <div class="mo-citation__person-content">
+              <h2>John Doe</h2>
+              <p>CEO, Company</p>
+              </div>
+            </div>
+          </div>
+    </div>
+    
   </div>
 </div>
 

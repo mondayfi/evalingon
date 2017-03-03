@@ -1,0 +1,74 @@
+.mo-citation {
+  position: relative;
+  color: $color-blue-zodiac;
+  
+  &__item{
+    
+  }
+  
+  &__bubble {
+    border-radius: 150px;
+    width: 100%;
+    background: $color-white;
+    padding: 60px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+    
+    &:before {
+      z-index: 2;
+      position: absolute;
+      top: 98.1%;
+      left: 70%;
+      margin-left: -25%;
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: solid 20px $color-white;
+      border-left: solid 20px transparent;
+      border-right: solid 20px transparent;
+    }
+  }
+  
+  &__bubble-inner {
+    position: relative;
+    padding-top: 1px;
+  }
+  
+  &__bubble-quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+    font-weight: bold;
+  }
+  
+  &__bubble-content {
+    position: relative;
+    margin-top: 20px;
+    @extend %mo-h3;  
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  &__person {
+    @extend %clearfix;
+    color: $color-blue-zodiac;
+  }
+  
+  &__person-image {
+    float: left;
+    width: 50%;
+    
+    img {
+      float: right;
+      margin-right: 20px;
+    }
+  }
+  
+  &__person-content {
+      float: left;
+      width: 50%;
+      margin-top: 30px;
+  }
+}

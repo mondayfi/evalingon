@@ -22,4 +22,14 @@
   @include breakpoint(desktop) {
     max-width: $content-size-desktop;
   }
+  
+  &--content {
+    @include breakpoint(laptop) {
+      max-width: $content-size-tablet;
+    }
+
+    @include breakpoint(desktop) {
+      max-width: $content-size-laptop;
+    }
+  }
 }

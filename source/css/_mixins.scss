@@ -5,6 +5,9 @@
     @if $point == phone-large {
         @media only screen and (min-width: $breakpoint-phone-large-min-width) and (max-width: $breakpoint-phone-large-max-width) { @content; }
     }
+    @if $point == phone-large-and-down {
+        @media only screen and (max-width: $breakpoint-phone-large-max-width) { @content; }
+    }
     @if $point == phone-large-and-up {
         @media only screen and (min-width: $breakpoint-phone-large-min-width) { @content; }
     }

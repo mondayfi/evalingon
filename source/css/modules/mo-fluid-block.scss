@@ -1,5 +1,5 @@
 .mo-fluid-block-wrapper {
- @extend %clearfix;
+  @extend %clearfix;
 }
 
 .mo-fluid-block {
@@ -10,7 +10,6 @@
   position: relative;
   background: $color-burnt-sienna;
   color: $color-white;
-    
   @extend %clearfix;
   
   &--second,

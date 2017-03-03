@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Global */
-.mo-grid:after, .mo-hero:after, .mo-hero__slide:after, .mo-footer:after, .mo-fluid-block-wrapper:after, .mo-fluid-block:after {
+.mo-grid:after, .mo-hero:after, .mo-hero__slide:after, .mo-footer:after, .mo-fluid-block-wrapper:after, .mo-fluid-block:after, .mo-citation__person:after {
   content: "";
   display: table;
   clear: both; }
@@ -109,13 +109,15 @@ h2 {
     h2 {
       font-size: 30px; } }
 
-h3 {
+h3,
+.mo-citation__bubble-content {
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 200;
   margin: 0; }
   @media only screen and (min-width: 640px) {
-    h3 {
+    h3,
+    .mo-citation__bubble-content {
       font-size: 24px; } }
 
 p {
@@ -160,10 +162,16 @@ body {
       max-width: 604px; } }
   @media only screen and (min-width: 960px) and (max-width: 1279px) {
     .mo-grid {
-      max-width: 604px; } }
+      max-width: 904px; } }
   @media only screen and (min-width: 1280px) {
     .mo-grid {
+      max-width: 1204px; } }
+  @media only screen and (min-width: 960px) and (max-width: 1279px) {
+    .mo-grid--content {
       max-width: 604px; } }
+  @media only screen and (min-width: 1280px) {
+    .mo-grid--content {
+      max-width: 904px; } }
 
 .mo-textaligncenter {
   text-align: center; }
@@ -173,6 +181,9 @@ body {
 
 .mo-textitalic {
   font-style: italic; }
+
+.title-margin {
+  margin-bottom: 20px; }
 
 /* Modules */
 .mo-hero {
@@ -232,26 +243,54 @@ body {
   left: 0;
   width: 100%;
   z-index: 2; }
+  .mo-nav--standalone {
+    position: relative;
+    top: auto;
+    left: auto;
+    height: 80px; }
+  .mo-nav__logo {
+    float: left;
+    margin: 10px 0 0 20px;
+    display: none; }
+    .menu-active .mo-nav__logo {
+      position: absolute;
+      z-index: 3;
+      display: block; }
+    .mo-nav--standalone .mo-nav__logo {
+      display: block; }
+    @media only screen and (min-width: 640px) {
+      .mo-nav--standalone .mo-nav__logo {
+        display: block; } }
   .mo-nav__navigation {
     width: 100%; }
-  .mo-nav__overlay {
-    background: #f5f5f5;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -1000px;
-    display: none; }
-    .menu-active .mo-nav__overlay {
-      display: block; }
-  .menu-active .mo-nav-wrapper {
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 60px;
-    right: 0;
-    bottom: 0;
-    margin-right: 0; }
+    @media only screen and (min-width: 960px) {
+      .mo-nav__navigation {
+        margin: 0 auto;
+        display: block;
+        max-width: 904px; } }
+    @media only screen and (min-width: 1280px) {
+      .mo-nav__navigation {
+        max-width: 1204px; } }
+  @media only screen and (max-width: 639px) {
+    .mo-nav__overlay {
+      background: #f5f5f5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: -1000px;
+      display: none; }
+      .menu-active .mo-nav__overlay {
+        display: block; } }
+  @media only screen and (max-width: 639px) {
+    .menu-active .mo-nav-wrapper {
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 60px;
+      right: 0;
+      bottom: 0;
+      margin-right: 0; } }
   .mo-nav__list {
     list-style: none;
     display: none;
@@ -262,7 +301,9 @@ body {
     @media only screen and (min-width: 640px) {
       .mo-nav__list {
         display: block;
-        float: right; } }
+        margin-bottom: 0;
+        float: right;
+        margin-top: 18px; } }
   .mo-nav__item {
     display: block;
     margin: 0;
@@ -270,7 +311,7 @@ body {
     text-align: center; }
     @media only screen and (min-width: 640px) {
       .mo-nav__item {
-        padding: 5px 15px;
+        padding: 5px 5px;
         border-radius: 15px;
         text-transform: uppercase;
         margin-left: 5px;
@@ -278,6 +319,10 @@ body {
         display: block;
         float: left;
         margin-left: -10px; } }
+    @media only screen and (min-width: 960px) {
+      .mo-nav__item {
+        padding-left: 15px;
+        padding-right: 15px; } }
     .mo-nav__item--active {
       background: #0c2042;
       color: #fff1d0; }
@@ -296,7 +341,7 @@ body {
         margin-left: 2px; } }
     .mo-nav__item-link--active {
       background: #0c2042;
-      color: #fff1d0; }
+      color: #fff; }
     .mo-nav__item-link:hover {
       background: #ed5751;
       color: #fff1d0; }
@@ -312,7 +357,7 @@ body {
   width: 40px;
   height: 60px;
   right: 15px;
-  top: 15px;
+  top: 2px;
   overflow: hidden;
   display: block;
   color: #0c2042;
@@ -355,7 +400,7 @@ body {
     background-position: center bottom;
     width: 100%;
     height: 400px;
-    background-size: 2000px;
+    background-size: 2020px;
     position: relative; }
   .mo-footer__forest-content {
     background: #0c2042;
@@ -451,7 +496,10 @@ body {
     @media only screen and (min-width: 640px) {
       .mo-fluid-block__image {
         width: 60%;
-        float: left; } }
+        float: left; }
+        .mo-fluid-block__image--full {
+          width: 100%;
+          float: none; } }
   .mo-fluid-block__content {
     position: absolute;
     top: 100px;
@@ -470,3 +518,56 @@ body {
         left: inherit;
         right: inherit;
         padding: 30px 20px; } }
+  @media only screen and (min-width: 640px) and (min-width: 960px) {
+    .mo-fluid-block__content {
+      padding-top: 60px; } }
+
+.mo-citation {
+  position: relative;
+  color: #0c2042; }
+  .mo-citation__bubble {
+    border-radius: 150px;
+    width: 100%;
+    background: #fff;
+    padding: 60px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px; }
+    .mo-citation__bubble:before {
+      z-index: 2;
+      position: absolute;
+      top: 98.1%;
+      left: 70%;
+      margin-left: -25%;
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: solid 20px #fff;
+      border-left: solid 20px transparent;
+      border-right: solid 20px transparent; }
+  .mo-citation__bubble-inner {
+    position: relative;
+    padding-top: 1px; }
+  .mo-citation__bubble-quote {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+    font-weight: bold; }
+  .mo-citation__bubble-content {
+    position: relative;
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic; }
+  .mo-citation__person {
+    color: #0c2042; }
+  .mo-citation__person-image {
+    float: left;
+    width: 50%; }
+    .mo-citation__person-image img {
+      float: right;
+      margin-right: 20px; }
+  .mo-citation__person-content {
+    float: left;
+    width: 50%;
+    margin-top: 30px; }

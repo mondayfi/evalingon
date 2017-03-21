@@ -3,8 +3,6 @@
 	<main role="main">
 		<!-- section -->
 		<section>
-      Kryvät
-
 			<h1><?php _e( 'Latest Posts', 'html5blank' ); ?></h1>
 
 			<?php get_template_part('loop'); ?>
@@ -14,7 +12,5 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

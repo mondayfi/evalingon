@@ -21,7 +21,8 @@ h1,
 }
 
 h2,
-%mo-h2 {
+%mo-h2,
+.mo-h2 {
   @include font-title;
   font-size: 20px;
   line-height: 1.125em;
@@ -35,11 +36,14 @@ h2,
 }
 
 h3,
-%mo-h3 {
+%mo-h3,
+.mo-h3 {
+  @include font-body;
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 200;
   margin: 0;
+  letter-spacing: 0;
   
   @include breakpoint(tablet-and-up) {
     font-size: 24px;

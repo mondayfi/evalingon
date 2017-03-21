@@ -16,3 +16,13 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(config.dest))
     .pipe(browserSync.reload({stream:true}));
 });
+
+gulp.task('sasswp', function () {
+  return gulp.src(config.srcImport)
+    .pipe(sass(config.settings))
+    .on('error', handleErrors)
+    .pipe(autoprefixer({ browsers: ['last 2 version'] }))
+    .pipe(rename(config.renamedFile))
+    .pipe(gulp.dest(config.destWp))
+    .pipe(browserSync.reload({stream:true}));
+});

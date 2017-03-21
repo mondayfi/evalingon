@@ -1,10 +1,17 @@
 <?php get_header(); ?>
+<?php get_template_part('nav-standalone'); ?>
 
-	<main role="main">
+  <div class="mo-fluid-block-wrapper">
+    <div href="#" class="mo-fluid-block mo-fluid-block--first">
+      <span class="mo-fluid-block__image mo-fluid-block__image--full"><img src="<?php echo get_template_directory_uri(); ?>/images/fluid-block-1-mobile.jpg" alt="fluid block"></span>
+    </div>
+  </div>
+
+	<main role="main" class="mo-colorwrapper">
 		<!-- section -->
-		<section>
+		<section class="mo-grid mo-grid--content">
 
-			<h1><?php the_title(); ?></h1>
+			<h1 class="mo-h2"><?php the_title(); ?></h1>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -12,8 +19,6 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<?php the_content(); ?>
-
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
 				<br class="clear">
 
@@ -39,7 +44,5 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

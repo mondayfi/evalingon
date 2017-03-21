@@ -1,4 +1,5 @@
 var dest = "./dist";
+var wpDest = "./evalingon-theme";
 var src = './source';
 var tmp = './tmp';
 
@@ -14,7 +15,9 @@ module.exports = {
     srcImport: src + "/css/import.scss",
     src: src + "/css/**/*.{css,scss,sass}",
     dest: dest + "/css",
+    destWp: wpDest + "/css",
     renamedFile: 'main.css',
+    renamedFileWP: 'style.css',
     settings: {
       indentedSyntax: true, // Enable .scss syntax!
       imagePath: 'images' // Used by the image-url helper
@@ -41,7 +44,8 @@ module.exports = {
   },
   images: {
     src: src + "/images/**/**.*",
-    dest: dest + "/images"
+    dest: dest + "/images",
+    wpDest: "evalingon-theme/img"
   },
   utils: {
     src: src + "/utils/**.*",

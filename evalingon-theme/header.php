@@ -5,13 +5,24 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
+    <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
+    <meta property="og:type" content="website"/>
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16" />
+    <meta property="og:title" content="Eva Lingon"/>
+    <meta property="twitter:title" content="Eva Lingon Ltd. Oy Ab is a production company founded by Tage Rönnqvist and Rasmus Tåg in 2011." />
+    <meta name="description" content="Eva Lingon Ltd. Oy Ab is a production company founded by Tage Rönnqvist and Rasmus Tåg in 2011." />
+    <meta property="og:description" content="Eva Lingon Ltd. Oy Ab is a production company founded by Tage Rönnqvist and Rasmus Tåg in 2011." />
+    <meta property="twitter:description" content="Eva Lingon Ltd. Oy Ab is a production company founded by Tage Rönnqvist and Rasmus Tåg in 2011." />
+    <meta property="og:site_name" content="Evalingon.com" />
+    <meta name="twitter:site" content="Evalingon.com" />
+    <meta property="og:image" content="" />
+    <meta property="twitter:image" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,900" rel="stylesheet">
 		<?php wp_head(); ?>
 		<script>
         // conditionizr.com
@@ -24,27 +35,3 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-
-		<!-- wrapper -->
-		<div class="wrapper">
-
-			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
-			<!-- /header -->

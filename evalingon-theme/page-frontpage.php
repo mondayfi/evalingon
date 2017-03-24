@@ -40,103 +40,51 @@
   </main>
 
 <div class="mo-fluid-block-wrapper">
-  <a href="#" class="mo-fluid-block mo-fluid-block--first">
+<?php
+$args = array( 'post_type' => 'projects', 'posts_per_page' => 4 );
+$loop = new WP_Query( $args );
+$count = 0;
+while ( $loop->have_posts() ) : $loop->the_post();
+$count++;
+?>
+  <a href=" <?php the_permalink(); ?>" class="mo-fluid-block <?php if( $count % 2 === 0 )  : ?>mo-fluid-block--odd<?php endif; ?>">
+    <?php if( $count % 2 === 0 )  : ?>
     <span class="mo-fluid-block__image">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/fluid-block-1-mobile.jpg" alt="fluid block">
+      <?php the_post_thumbnail('large'); ?>
     </span>
+    <?php endif; ?>
     <span class="mo-fluid-block__content">
       <span class="mo-fluid-block__content-mobile">
-        <h2>Project Title</h2>
+        <h2><?php the_title(); ?></h2>
       </span>
-      <p>Donec v olutpat iaculis tellus, sed suscipit justo luctus vel.</p>
-      <span class="mo-button mo-button--blue-zodiac">Read more</span>
+        <p><?php the_excerpt(); ?></p>
+        <span class="mo-button mo-button--blue-zodiac">Read more</span>
     </span>
+    <?php if( $count % 2 !== 0 )  : ?>
+    <span class="mo-fluid-block__image">
+      <?php the_post_thumbnail('large'); ?>
+    </span>
+    <?php endif; ?>
   </a>
-  <a href="#" class="mo-fluid-block mo-fluid-block--second">
-      <div class="mo-fluid-block__content">
-      <span class="mo-fluid-block__content-mobile">
-        <h2>Project Title</h2>
-      </span>
-      <p>Donec v olutpat iaculis tellus, sed suscipit justo luctus vel.</p>
-      <span class="mo-button">Read more</span>
-    </div> 
-    <div class="mo-fluid-block__image">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/fluid-block-2-mobile.jpg" alt="fluid block">
-    </div>
-  </a>
-
-  <a href="#" class="mo-fluid-block mo-fluid-block--third">
-    <div class="mo-fluid-block__image">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/fluid-block-1-mobile.jpg" alt="fluid block">
-    </div>
-    <div class="mo-fluid-block__content">
-      <span class="mo-fluid-block__content-mobile">
-        <h2>Project Title</h2>
-      </span>
-      <p>Donec v olutpat iaculis tellus, sed suscipit justo luctus vel.</p>
-      <span href="#" class="mo-button">Read more</span>
-    </div> 
-  </a>
-
-  <a href="#" class="mo-fluid-block mo-fluid-block--fourth">
-    <div class="mo-fluid-block__content">
-      <span class="mo-fluid-block__content-mobile">
-        <h2>Project Title</h2>
-      </span>
-      <p>Donec v olutpat iaculis tellus, sed suscipit justo luctus vel.</p>
-      <span href="#" class="mo-button">Read more</span>
-    </div> 
-    <div class="mo-fluid-block__image">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/fluid-block-2-mobile.jpg" alt="fluid block">
-    </div>
-  </a>
+<?php endwhile; ?>
 </div>
 
 <div class="mo-colorwrapper mo-colorwrapper--burnt-sienna">
   <div class="mo-grid mo-grid--content">
-    <h2 class="title-margin">We also have a podcast</h2>
-<iframe width="100%" height="140" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/302509566&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-
-    <a href="#" class="mo-button mo-button--blue-zodiac">More episodes</a>
-  </div>
+<?php
+$args = array( 'post_type' => 'podcasts', 'posts_per_page' => 1 );
+$loop = new WP_Query( $args );
+$count = 0;
+while ( $loop->have_posts() ) : $loop->the_post();
+$count++;
+?>
+      <h2><?php the_title(); ?></h2>
+      <p><?php the_content(); ?></p>
+      <a  href="<?php the_permalink(); ?>" class="mo-button mo-button--blue-zodiac">Read more</a>
+<?php endwhile; ?>
+</div>
 </div>
 
-<div class="mo-colorwrapper mo-colorwrapper--barley-white ">
-  <div class="mo-grid mo-grid--content">    
-    <div class="mo-citation">
-          <div class="mo-citation__item">
-            <div class="mo-citation__bubble">
-              <div class="mo-citation__bubble-inner">
-                <div class="mo-citation__bubble-quote">“</div>
-                <div class="mo-citation__bubble-content">Donec volutpat iaculis tellus, sed suscipit justo luctus vel.</div>
-              </div>
-            </div>
-            <div class="mo-citation__person">
-              <div class="mo-citation__person-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/johndoe.png" alt="">
-              </div>
-              <div class="mo-citation__person-content">
-              <h2>John Doe</h2>
-              <p>CEO, Company</p>
-              </div>
-            </div>
-          </div>
-    </div>
-    
-  </div>
-</div>
-
-<div class="mo-colorwrapper mo-colorwrapper--blue-zodiac">
-  <div class="mo-grid">
-
-    <ul class="mo-logo-wall">
-      <li class="mo-logo-wall__item"><img src="<?php echo get_template_directory_uri(); ?>/images/logo1.jpg" alt="" class="mo-logo-wall__logo"></li>
-      <li class="mo-logo-wall__item"><img src="<?php echo get_template_directory_uri(); ?>/images/logo2.jpg" alt="" class="mo-logo-wall__logo"></li>
-      <li class="mo-logo-wall__item"><img src="<?php echo get_template_directory_uri(); ?>/images/logo3.jpg" alt="" class="mo-logo-wall__logo"></li>
-      <li class="mo-logo-wall__item"><img src="<?php echo get_template_directory_uri(); ?>/images/logo4.jpg" alt="" class="mo-logo-wall__logo"></li>
-      <li class="mo-logo-wall__item"><img src="<?php echo get_template_directory_uri(); ?>/images/logo5.jpg" alt="" class="mo-logo-wall__logo"></li>
-    </ul>
-  </div>
-</div>
+<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
 
 <?php get_footer(); ?>

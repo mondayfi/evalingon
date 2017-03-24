@@ -491,7 +491,7 @@ body {
   background: #ed5751;
   color: #fff; }
   @media only screen and (min-width: 640px) {
-    .mo-fluid-block--second, .mo-fluid-block--fourth {
+    .mo-fluid-block--odd {
       background: #fff1d0;
       color: #0c2042; } }
   .mo-fluid-block__image {

@@ -35,6 +35,7 @@
   
   &__navigation {
     width: 100%;
+    @extend %clearfix;
   
     @include breakpoint(laptop-and-up) {
       margin: 0 auto;

@@ -5,6 +5,14 @@
   @include breakpoint(laptop-and-up) {
     padding: 8em 0;
   }
+  
+  &--small-padding {
+    padding: 3em;
+    
+    @include breakpoint(laptop-and-up) {
+      padding: 4em;
+    }
+  }
 
   &--blue-zodiac {
     background: $color-blue-zodiac;

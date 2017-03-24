@@ -27,7 +27,7 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
+    add_image_size('large', 700, 530, true); // Large Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -173,8 +173,8 @@ if (function_exists('register_sidebar'))
 {
     // Define Sidebar Widget Area 1
     register_sidebar(array(
-        'name' => __('Widget Area 1', 'html5blank'),
-        'description' => __('Description for this widget-area...', 'html5blank'),
+        'name' => __('Frontpage Widget Area', 'html5blank'),
+        'description' => __('These are used to render the content under the work section', 'html5blank'),
         'id' => 'widget-area-1',
         'before_widget' => '<div id="%1$s" class="%2$s">',
         'after_widget' => '</div>',
@@ -344,7 +344,8 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+add_action('init', 'create_post_type_projects');
+add_action('init', 'create_post_type_podcasts');
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -394,26 +395,25 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 	Custom Post Types
 \*------------------------------------*/
 
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_html5()
+function create_post_type_projects()
 {
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-blank', // Register Custom Post Type
+    register_taxonomy_for_object_type('category', 'projects'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'projects');
+    register_post_type('projects', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
-            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+            'name' => __('Projects', 'projects'), // Rename these to suit
+            'singular_name' => __('Projects', 'projects'),
+            'add_new' => __('Add New', 'projects'),
+            'add_new_item' => __('Add Project', 'projects'),
+            'edit' => __('Edit', 'projects'),
+            'edit_item' => __('Edit Projects', 'projects'),
+            'new_item' => __('New Projects', 'projects'),
+            'view' => __('View Projects', 'projects'),
+            'view_item' => __('View Projects', 'projects'),
+            'search_items' => __('Search Projects', 'projects'),
+            'not_found' => __('No Projects found', 'projects'),
+            'not_found_in_trash' => __('No Projects found in Trash', 'projects')
         ),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
@@ -423,12 +423,51 @@ function create_post_type_html5()
             'editor',
             'excerpt',
             'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
+        ), 
+        'can_export' => true, 
+        'menu_icon'  => 'dashicons-admin-page',
         'taxonomies' => array(
             'post_tag',
             'category'
-        ) // Add Category and Post Tags support
+        )
+    ));
+}
+
+function create_post_type_podcasts()
+{
+    register_taxonomy_for_object_type('category', 'podcasts'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'podcasts');
+    register_post_type('podcasts', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Podcasts', 'podcasts'), // Rename these to suit
+            'singular_name' => __('Podcasts', 'podcasts'),
+            'add_new' => __('Add New', 'podcasts'),
+            'add_new_item' => __('Add Podcasts', 'podcasts'),
+            'edit' => __('Edit', 'podcasts'),
+            'edit_item' => __('Edit Podcasts', 'podcasts'),
+            'new_item' => __('New Podcasts', 'podcasts'),
+            'view' => __('View Podcasts', 'podcasts'),
+            'view_item' => __('View Podcasts', 'podcasts'),
+            'search_items' => __('Search Podcasts', 'podcasts'),
+            'not_found' => __('No Podcasts found', 'podcasts'),
+            'not_found_in_trash' => __('No Podcasts found in Trash', 'podcasts')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), 
+        'can_export' => true, 
+        'menu_icon'  => 'dashicons-admin-collapse',
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        )
     ));
 }
 

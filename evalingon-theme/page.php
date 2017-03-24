@@ -1,11 +1,16 @@
 <?php get_header(); ?>
 <?php get_template_part('nav-standalone'); ?>
 
+
+<?php if ( has_post_thumbnail() ) : ?>
   <div class="mo-fluid-block-wrapper">
     <div href="#" class="mo-fluid-block mo-fluid-block--first">
-      <span class="mo-fluid-block__image mo-fluid-block__image--full"><img src="<?php echo get_template_directory_uri(); ?>/images/fluid-block-1-mobile.jpg" alt="fluid block"></span>
+      <span class="mo-fluid-block__image mo-fluid-block__image--full">
+        <?php the_post_thumbnail('large'); ?>
+      </span>
     </div>
   </div>
+<?php endif; ?>
 
 	<main role="main" class="mo-colorwrapper">
 		<!-- section -->

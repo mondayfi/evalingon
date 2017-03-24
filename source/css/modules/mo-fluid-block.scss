@@ -12,8 +12,7 @@
   color: $color-white;
   @extend %clearfix;
   
-  &--second,
-  &--fourth {
+  &--odd {
     @include breakpoint(tablet-and-up) {
       background: $color-barley-white;
       color: $color-blue-zodiac;    
@@ -41,13 +40,14 @@
   
   &__content {
     position: absolute;
-    top: 100px;
+    top: 30px;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
     
     @include breakpoint(tablet-and-up) {
+      top: 100px;
       width: 40%;
       padding: 20px;
       height: 100%;

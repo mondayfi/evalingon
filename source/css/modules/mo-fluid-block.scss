@@ -18,7 +18,12 @@
       color: $color-blue-zodiac;    
     }
   }
-
+  
+  &--podcast {
+    background: transparent;
+    color: $color-blue-zodiac;
+  }
+  
   &__image {
     width: 100%;
     
@@ -34,6 +39,10 @@
       &--full {
         width: 100%;
         float: none;
+      }
+      
+      .mo-fluid-block--podcast & {
+        width: 50%;
       }
     }
   }
@@ -57,6 +66,10 @@
       left: inherit;
       right: inherit;
       padding: 30px 20px;
+      
+      .mo-fluid-block--podcast & {
+        width: 50%;
+      }
       
       @include breakpoint(laptop-and-up) {
         padding-top: 60px;

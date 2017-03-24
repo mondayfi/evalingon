@@ -1,4 +1,4 @@
-    <div class="mo-footer">
+    <div class="mo-footer" id="contact-us">
       <h2>Contact us</h2>
       <a href="mailto: info@evalingon.com" class="mo-link-icon mo-footer__contact"><span class="mo-icon mo-icon--envelope">info@evalingon.com</a>
       <a href="callto:+358505819461" class="mo-link-icon mo-footer__contact"><span class="mo-icon mo-icon--phone">+358 50 581 9461</a>

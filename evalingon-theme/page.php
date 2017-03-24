@@ -12,7 +12,7 @@
   </div>
 <?php endif; ?>
 
-	<main role="main" class="mo-colorwrapper">
+	<main role="main" class="mo-colorwrapper mo-colorwrapper--small-padding">
 		<!-- section -->
 		<section class="mo-grid mo-grid--content">
 

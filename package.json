@@ -44,5 +44,8 @@
     "port": 8080,
     "hostname": "localhost",
     "source": "source/"
+  }, 
+  "scripts": {
+    "dev": "docker-compose up && gulp watch-wp"
   }
 }

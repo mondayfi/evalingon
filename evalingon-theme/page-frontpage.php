@@ -78,7 +78,7 @@ $count = 0;
 while ( $loop->have_posts() ) : $loop->the_post();
 $count++;
 ?>
-      <h2><?php the_title(); ?></h2>
+      <a  href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
       <p><?php the_content(); ?></p>
       <a  href="<?php the_permalink(); ?>" class="mo-button mo-button--blue-zodiac">Read more</a>
 <?php endwhile; ?>

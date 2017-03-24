@@ -217,6 +217,21 @@ body {
     bottom: 0;
     left: 0;
     right: 0; }
+  .mo-hero__btn {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    z-index: 100;
+    width: 150px;
+    text-align: center; }
+    @media only screen and (min-width: 640px) {
+      .mo-hero__btn {
+        bottom: 50px; } }
+    @media only screen and (min-width: 960px) {
+      .mo-hero__btn {
+        bottom: 80px; } }
   .mo-hero__image {
     position: absolute;
     left: 49.99%;

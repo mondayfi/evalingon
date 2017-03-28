@@ -9,3 +9,39 @@ body {
   box-sizing: border-box;
 }
 
+article {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  ul,
+  ol {
+    margin: 0 0 20px 0;
+    padding: 0 0 0 20px;
+  }
+  blockquote {
+    border-left: 5px solid $color-burnt-sienna;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote:before {
+    color: $color-burnt-sienna;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
+  a {
+    color: $color-burnt-sienna;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

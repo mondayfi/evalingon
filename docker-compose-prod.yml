@@ -1,4 +1,3 @@
-
 version: '2'
 
 services:
@@ -12,13 +11,9 @@ services:
     volumes:
       - ./evalingon-theme:/var/www/html/wp-content/themes/evalingon-theme
       - ./plugins:/var/www/html/wp-content/plugins
-    restart: always
-
 
   mysql:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: wordpress
-    restart: always
-

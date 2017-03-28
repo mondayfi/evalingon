@@ -499,4 +499,17 @@ add_action('init', create_function('$a',"remove_action( 'init', 'wp_version_chec
 add_filter('pre_option_update_core','__return_null');
 add_filter('pre_site_transient_update_core','__return_null');
 }
+/**
+ * Remove H1, H2, and other extraneous styles from the visual editor
+ *
+ * Default: p,address,pre,h1,h2,h3,h4,h5,h6
+ * 
+ */
+function wp_remove_h1_from_editor( $init ) {
+    $init['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;';
+    return $init;
+}
+add_filter( 'tiny_mce_before_init', 'wp_remove_h1_from_editor' );
+
+
 ?>

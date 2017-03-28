@@ -115,7 +115,7 @@ h3,
 .mo-citation__bubble-content,
 .mo-h3 {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5em;
   font-weight: 200;
   margin: 0;
@@ -153,6 +153,37 @@ body {
 
 * {
   box-sizing: border-box; }
+
+article img {
+  max-width: 100%;
+  height: auto; }
+
+article ul,
+article ol {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px; }
+
+article blockquote {
+  border-left: 5px solid #ed5751;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’"; }
+
+article blockquote:before {
+  color: #ed5751;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em; }
+
+article blockquote p {
+  display: inline; }
+
+article a {
+  color: #ed5751; }
+  article a:hover {
+    text-decoration: underline; }
 
 .mo-grid {
   position: relative;
@@ -274,7 +305,7 @@ body {
     margin: 10px 0 0 20px;
     display: none; }
     .menu-active .mo-nav__logo {
-      position: absolute;
+      position: fixed;
       z-index: 3;
       display: block; }
     .mo-nav--standalone .mo-nav__logo {

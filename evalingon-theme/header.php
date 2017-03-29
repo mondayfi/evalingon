@@ -24,7 +24,7 @@
     <meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/logoshare.jpg" />
     <meta name="google-site-verification" content="bABtw1qMbsLWpp2uo8koJncu_rwqBjiRYkJNDs31Jxs" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,900" rel="stylesheet">
-    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/evalingon-apple-logo.jpg">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/evalingon-apple-logo.jpg">
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

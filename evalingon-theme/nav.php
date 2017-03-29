@@ -2,8 +2,8 @@
 <div class="wrapper">
   <div class="mo-hero">
     <div class="mo-hero__slide">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/hero-mobile.jpg" class="mo-hero__image mo-hero__image--small" alt="">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/hero-desktop.jpg" class="mo-hero__image mo-hero__image--large" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/hero-mobile.jpg" class="mo-hero__image mo-hero__image--small" alt="Eva Lingon Hero image phone">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/hero-desktop.jpg" class="mo-hero__image mo-hero__image--large" alt="Eva Lingon Hero image desktop">
     </div>
     
     <a href="https://www.youtube.com/watch?v=Z7AiTCPY78k" class="mpopup_iframe mo-hero__btn mo-button">Watch Showreel</a>

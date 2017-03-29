@@ -16,6 +16,7 @@
   <a href=" <?php the_permalink(); ?>" class="mo-fluid-block <?php if( $count % 2 === 0 )  : ?>mo-fluid-block--odd<?php endif; ?>">
     <?php if( $count % 2 === 0 )  : ?>
     <span class="mo-fluid-block__image">
+      <span class="mo-fluid-block__overlay"></span>
       <?php the_post_thumbnail('large'); ?>
     </span>
     <?php endif; ?>
@@ -28,6 +29,7 @@
     </span>
     <?php if( $count % 2 !== 0 )  : ?>
     <span class="mo-fluid-block__image">
+      <span class="mo-fluid-block__overlay"></span>
       <?php the_post_thumbnail('large'); ?>
     </span>
     <?php endif; ?>

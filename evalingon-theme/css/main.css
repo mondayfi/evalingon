@@ -90,11 +90,11 @@ body {
 h1 {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: -1px;
-  font-size: 48px;
+  font-size: 45px;
   line-height: 1.125em;
   font-weight: 200;
   margin: 0; }
-  @media only screen and (min-width: 640px) {
+  @media only screen and (min-width: 960px) {
     h1 {
       font-size: 64px; } }
 
@@ -548,8 +548,17 @@ article a {
   .mo-fluid-block--podcast {
     background: transparent;
     color: #0c2042; }
+  .mo-fluid-block__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3); }
+    @media only screen and (min-width: 640px) {
+      .mo-fluid-block__overlay {
+        display: none; } }
   .mo-fluid-block__image {
-    width: 100%; }
+    width: 100%;
+    display: block; }
     .mo-fluid-block__image img {
       width: 100%;
       display: block; }
@@ -568,7 +577,8 @@ article a {
     left: 0;
     right: 0;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    z-index: 1; }
     @media only screen and (min-width: 640px) {
       .mo-fluid-block__content {
         top: 100px;

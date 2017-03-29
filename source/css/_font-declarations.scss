@@ -10,12 +10,12 @@ h1,
 %mo-h1 {
   @include font-title;
   letter-spacing: -1px;
-  font-size: 48px;
+  font-size: 45px;
   line-height: 1.125em;
   font-weight: 200;
   margin: 0;
 
-  @include breakpoint(tablet-and-up) {
+  @include breakpoint(laptop-and-up) {
     font-size: 64px;
   }
 }

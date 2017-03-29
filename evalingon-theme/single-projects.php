@@ -8,6 +8,7 @@
   <div class="mo-fluid-block-wrapper">
     <div href="#" class="mo-fluid-block mo-fluid-block--first">
       <span class="mo-fluid-block__image mo-fluid-block__image--full">
+        
         <?php the_post_thumbnail('large'); ?>
       </span>
     </div>
@@ -20,9 +21,7 @@
 
 
 			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
+			<h1><?php the_title(); ?></h1>
 			<!-- /post title -->
 
 			<?php the_content(); // Dynamic Content ?>

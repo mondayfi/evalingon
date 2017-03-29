@@ -20,8 +20,8 @@
     <meta property="twitter:description" content="Eva Lingon Ltd. Oy Ab is a production company founded by Tage Rönnqvist and Rasmus Tåg in 2011." />
     <meta property="og:site_name" content="Evalingon.com" />
     <meta name="twitter:site" content="Evalingon.com" />
-    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/logo-share.jpg" />
-    <meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/logo-share.jpg" />
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/logoshare.jpg" />
+    <meta property="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/logoshare.jpg" />
     <meta name="google-site-verification" content="bABtw1qMbsLWpp2uo8koJncu_rwqBjiRYkJNDs31Jxs" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,900" rel="stylesheet">
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

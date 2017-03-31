@@ -7,17 +7,20 @@
   height: 320px;
   background: $color-blue-zodiac;
   overflow: hidden;
+  display: block;
 
   @include breakpoint(phone-large-and-up) {
     height: 400px;
   }
 
   @include breakpoint(tablet-and-up) {
+
     height: 410px;
     padding-bottom: 50.7%;
   }
   
   @include breakpoint(laptop-and-up) {
+    display: none;
     height: auto;
   }
   
@@ -91,4 +94,47 @@
       }
     }
   }
+}
+
+
+.mo-parallax {
+  height: 1000px;
+  position: relative;
+  z-index: 10;
+  display: none;
+  
+  @include breakpoint(laptop-and-up) {
+    display: block;
+  }
+  
+  &__parallax {
+    background-position: bottom center;
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+    width: 100%;
+    position: fixed;
+    height: 1000px;
+
+    &--0 {
+      background-image: url(../images/hero-trees-furthest.png);
+    }
+    &--1 {
+      background-image: url(../images/hero-trees-closer.png);
+    }
+    &--2 {
+      background-image: url(../images/hero-closest.png);
+    }
+    &--3 {
+      background-image: url(../images/hero-drone.png);
+    }
+    &--4 {
+      background-image: url(../images/hero-logo.png);
+    }
+  }
+}
+
+.main-area {
+  background: $color-barley-white;
+  z-index: 11;
+  position: relative;
 }

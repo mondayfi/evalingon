@@ -33,8 +33,8 @@
     </div>
 
 		</div>
-		<!-- /wrapper -->
-
+    </div>
 		<?php wp_footer(); ?>
+    
 	</body>
 </html>

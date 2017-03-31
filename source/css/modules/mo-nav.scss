@@ -1,9 +1,9 @@
 .mo-nav {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 12;
+  position: fixed;
   
   &--standalone {
     position: relative;
@@ -83,7 +83,7 @@
     display: none;  
     margin: 30px 0;
     padding: 0 20px;
-    
+      
     .menu-active & {
       display: block;
     }
@@ -133,7 +133,6 @@
       font-size: 16px;
       padding: 20px 0;
       
-      
       @include breakpoint(tablet-and-up) {
         padding: 5px 15px;
         border-radius: $button-radius;
@@ -149,7 +148,8 @@
   }
   .current-menu-item a {
     background: $color-blue-zodiac;
-    color: $color-white;  
+    color: $color-white;
+    text-shadow: none;
   }
 }
  

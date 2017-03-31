@@ -1,6 +1,6 @@
 <?php /* Template Name: Frontpage */ get_header(); ?>
 <?php get_template_part('nav'); ?>
-
+<div class="main-area">
 <main role="main" class="mo-colorwrapper">
     <!-- section -->
     <section class="mo-grid mo-grid--content">
@@ -88,5 +88,4 @@ $count++;
 </div>
 
 <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-
 <?php get_footer(); ?>

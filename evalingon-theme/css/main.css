@@ -230,7 +230,8 @@ article a {
   display: block;
   height: 320px;
   background: #0c2042;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block; }
   @media only screen and (min-width: 480px) {
     .mo-hero {
       height: 400px; } }
@@ -240,6 +241,7 @@ article a {
       padding-bottom: 50.7%; } }
   @media only screen and (min-width: 960px) {
     .mo-hero {
+      display: none;
       height: auto; } }
   .mo-hero__slide {
     box-sizing: border-box;
@@ -289,12 +291,43 @@ article a {
         .mo-hero__image--large {
           display: block; } }
 
+.mo-parallax {
+  height: 1000px;
+  position: relative;
+  z-index: 10;
+  display: none; }
+  @media only screen and (min-width: 960px) {
+    .mo-parallax {
+      display: block; } }
+  .mo-parallax__parallax {
+    background-position: bottom center;
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+    width: 100%;
+    position: fixed;
+    height: 1000px; }
+    .mo-parallax__parallax--0 {
+      background-image: url(../images/hero-trees-furthest.png); }
+    .mo-parallax__parallax--1 {
+      background-image: url(../images/hero-trees-closer.png); }
+    .mo-parallax__parallax--2 {
+      background-image: url(../images/hero-closest.png); }
+    .mo-parallax__parallax--3 {
+      background-image: url(../images/hero-drone.png); }
+    .mo-parallax__parallax--4 {
+      background-image: url(../images/hero-logo.png); }
+
+.main-area {
+  background: #fff1d0;
+  z-index: 11;
+  position: relative; }
+
 .mo-nav {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2; }
+  z-index: 12;
+  position: fixed; }
   .mo-nav--standalone {
     position: relative;
     top: auto;
@@ -396,7 +429,8 @@ article a {
         color: #fff1d0; }
   .mo-nav .current-menu-item a {
     background: #0c2042;
-    color: #fff; }
+    color: #fff;
+    text-shadow: none; }
 
 .mo-nav-opener {
   -webkit-tap-highlight-color: transparent;
